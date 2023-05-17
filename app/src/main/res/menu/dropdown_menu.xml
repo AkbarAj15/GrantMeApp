@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/jenkellakilaki"
+        android:title="Laki-laki" />
+    <item
+        android:id="@+id/jenkelperempuan"
+        android:title="Perempuan"/>
+    <item
+        android:id="@+id/jenkellainnya"
+        android:title="Lainnya" />
+</menu>

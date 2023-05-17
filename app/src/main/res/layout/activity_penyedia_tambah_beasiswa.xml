@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".penyedia_TambahBeasiswa">
+
+    <ImageButton
+        android:id="@+id/backtambahbeasiswa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.072"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.045"
+        app:srcCompat="@drawable/arrow_back" />
+
+
+    <TextView
+        android:id="@+id/texttambahbeas"
+        android:layout_width="302dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Tambahkan Beasiswa"
+        android:textColor="#161C2B"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.321"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="414dp"
+        android:layout_height="626dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/texttambahbeas">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                app:layout_constraintTop_toBottomOf="@id/btntambahbeasiswa"
+                tools:layout_editor_absoluteX="37dp" />
+
+            <Button
+                android:id="@+id/btntambahbeasiswa"
+                android:layout_width="359dp"
+                android:layout_height="47dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/button_daftar"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center"
+                android:text="Tambahkan Beasiswa"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inputkriteria" />
+
+
+            <TextView
+                android:id="@+id/labelnale6"
+                android:layout_width="225dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/poppins"
+                android:text="Nama Lengkap"
+                android:textColor="#161C2B"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.197"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+            <EditText
+                android:id="@+id/unggahposter"
+                android:layout_width="340dp"
+                android:layout_height="46dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/form_daftar"
+                android:ems="10"
+                android:fontFamily="@font/poppins"
+                android:hint="Unggah Poster"
+                android:inputType="text"
+                android:padding="5dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="20dp"
+                android:textColor="@color/black"
+                android:textColorHint="#A3A3AE"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.486"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelnotel2" />
+
+            <ImageButton
+                android:id="@+id/btnunggahpost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/icon_unggah"
+                app:layout_constraintEnd_toEndOf="@+id/unggahposter"
+                app:layout_constraintHorizontal_bias="0.955"
+                app:layout_constraintStart_toStartOf="@+id/unggahposter"
+                app:layout_constraintTop_toTopOf="@+id/unggahposter" />
+
+            <EditText
+                android:id="@+id/tanggalbuka"
+                android:layout_width="340dp"
+                android:layout_height="46dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/form_daftar"
+                android:drawableRight="@drawable/icon_dl"
+                android:editable="false"
+                android:ems="10"
+                android:focusableInTouchMode="true"
+                android:fontFamily="@font/poppins"
+                android:hint="dd/mm/yy"
+                android:padding="5dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="20dp"
+                android:textColor="@color/black"
+                android:textColorHint="#A3A3AE"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelnotel4" />
+
+            <EditText
+                android:id="@+id/tanggaltutup"
+                android:layout_width="340dp"
+                android:layout_height="46dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/form_daftar"
+                android:drawableRight="@drawable/icon_dl"
+                android:ems="10"
+                android:fontFamily="@font/poppins"
+                android:hint="dd/mm/yy"
+                android:inputType="text"
+                android:padding="5dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="20dp"
+                android:textColor="@color/black"
+                android:textColorHint="#A3A3AE"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.486"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelnotel5" />
+
+            <TextView
+                android:id="@+id/labelemail2"
+                android:layout_width="225dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/poppins"
+                android:text="Jenis Beasiswa"
+                android:textColor="#161C2B"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.197"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inputnamabeasiswa" />
+
+            <EditText
+                android:id="@+id/inputnamabeasiswa"
+                android:layout_width="340dp"
+                android:layout_height="46dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/form_daftar"
+                android:ems="10"
+                android:fontFamily="@font/poppins"
+                android:hint="Masukkan nama beasiswa"
+                android:inputType="text"
+                android:padding="5dp"
+                android:paddingStart="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="#A3A3AE"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.486"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelnale6" />
+
+            <TextView
+                android:id="@+id/labelnotel2"
+                android:layout_width="225dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/poppins"
+                android:text="Poster Beasiswa"
+                android:textColor="#161C2B"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.197"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inputjenisbeasiswa" />
+
+            <TextView
+                android:id="@+id/labelnotel4"
+                android:layout_width="225dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/poppins"
+                android:text="Dibuka mulai"
+                android:textColor="#161C2B"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.192"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/unggahposter" />
+
+            <TextView
+                android:id="@+id/labelnotel5"
+                android:layout_width="225dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/poppins"
+                android:text="Sampai dengan"
+                android:textColor="#161C2B"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.187"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tanggalbuka" />
+
+            <TextView
+                android:id="@+id/labelnotel6"
+                android:layout_width="225dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/poppins"
+                android:text="Kuota"
+                android:textColor="#161C2B"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.192"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tanggaltutup" />
+
+            <TextView
+                android:id="@+id/labelnotel7"
+                android:layout_width="225dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/poppins"
+                android:text="Syarat dan Kriteria"
+                android:textColor="#161C2B"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.192"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inputkuota" />
+
+            <EditText
+                android:id="@+id/inputjenisbeasiswa"
+                android:layout_width="340dp"
+                android:layout_height="46dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/form_daftar"
+                android:ems="10"
+                android:fontFamily="@font/poppins"
+                android:hint="Masukkan jenis beasiswa"
+                android:padding="5dp"
+                android:paddingStart="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="#A3A3AE"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.486"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelemail2" />
+
+            <EditText
+                android:id="@+id/inputkuota"
+                android:layout_width="340dp"
+                android:layout_height="46dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/form_daftar"
+                android:ems="10"
+                android:fontFamily="@font/poppins"
+                android:hint="Masukkan maksimal kuota"
+                android:inputType="number"
+                android:padding="5dp"
+                android:paddingStart="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="#A3A3AE"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.486"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelnotel6" />
+
+            <EditText
+                android:id="@+id/inputkriteria"
+                android:layout_width="340dp"
+                android:layout_height="90dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/form_daftar"
+                android:ems="10"
+                android:fontFamily="@font/poppins"
+                android:hint="Masukkan syarat dan kriteria"
+                android:inputType="text"
+                android:padding="5dp"
+                android:paddingStart="15dp"
+                android:textColor="@color/black"
+                android:textColorHint="#A3A3AE"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.486"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelnotel7" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

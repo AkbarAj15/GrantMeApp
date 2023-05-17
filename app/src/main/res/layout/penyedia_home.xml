@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".penyedia_home"
+    android:background="@color/white">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragmentContainer" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="1dp"
+        android:background="@drawable/rounded_navbar"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:outlineAmbientShadowColor="@color/black"
+        android:paddingStart="10dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="15dp"
+        android:weightSum="4">
+
+        <LinearLayout
+            android:id="@+id/page_home"
+            android:layout_width="53dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_icon"
+            android:gravity="center"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp">
+
+            <ImageView
+                android:id="@+id/icon_home"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/icon_selected_home" />
+
+            <TextView
+                android:id="@+id/text_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Beranda"
+                android:textColor="#4A44AA"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/page_beasiswa"
+            android:layout_width="65dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp">
+
+            <ImageView
+                android:id="@+id/icon_beasiswa"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/icon_beasiswa" />
+
+            <TextView
+                android:id="@+id/text_beasiswa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="1dp"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Pendaftar"
+                android:textColor="#4A44AA"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/page_status"
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp">
+
+            <ImageView
+                android:id="@+id/icon_status"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/icon_status" />
+
+            <TextView
+                android:id="@+id/text_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Status"
+                android:textColor="#4A44AA"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/page_profile"
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp">
+
+            <ImageView
+                android:id="@+id/icon_profil"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:src="@drawable/icon_profile" />
+
+            <TextView
+                android:id="@+id/text_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="2dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Profil"
+                android:textColor="#4A44AA"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

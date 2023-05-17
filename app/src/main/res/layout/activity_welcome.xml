@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ActivityWelcome">
+
+
+    <ImageView
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="465dp"
+        android:background="@drawable/bulat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <View
+        android:id="@+id/woman"
+        android:layout_width="299dp"
+        android:layout_height="302dp"
+        android:layout_marginTop="104dp"
+        android:background="@drawable/woman_laptop"
+        android:viewportWidth="598"
+        android:viewportHeight="398"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="179dp"
+        android:layout_height="53dp"
+
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center"
+        android:text="Grant Me"
+        android:textColor="#6E85B7"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center"
+        android:text="Welcome to"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/woman" />
+
+    <Button
+        android:id="@+id/btnDaftar"
+        android:layout_width="359dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_daftar"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center"
+        android:text="Daftar"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="359dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button_login"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center"
+        android:text="Masuk"
+        android:textAllCaps="false"
+        android:textColor="#4464AA"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textTemukan"
+        android:layout_width="288dp"
+        android:layout_height="wrap_content"
+
+        android:fontFamily="@font/poppins_medium"
+        android:text="Temukan Beasiswamu dan Raih Impianmu"
+        android:textColor="#505766"
+        android:textSize="13dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.544"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

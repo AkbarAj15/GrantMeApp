@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Design.NoActionBar"
+        tools:targetApi="31">
+        <activity
+            android:name=".UploadActivity"
+            android:exported="true" />
+        <activity
+            android:name=".penyedia_TambahBeasiswa"
+            android:exported="true" />
+        <activity
+            android:name=".ActivityProfile"
+            android:exported="false" />
+        <activity
+            android:name=".penyedia_home"
+            android:exported="true" />
+        <activity
+            android:name=".BuatUsername2"
+            android:exported="false" />
+        <activity
+            android:name=".bantuan"
+            android:exported="true" />
+        <activity
+            android:name=".dokumen_saya"
+            android:exported="true" />
+        <activity
+            android:name=".informasi_pribadi"
+            android:exported="true" />
+        <activity
+            android:name=".login"
+            android:exported="true" />
+        <activity
+            android:name=".ActivityWelcome2"
+            android:exported="true" />
+        <activity
+            android:name=".ActivityBuatUsername"
+            android:exported="true" />
+        <activity
+            android:name=".ActivityRegistrasiPenyedia"
+            android:exported="true" />
+        <activity
+            android:name=".ActivityRegistrasiPenerima"
+            android:exported="true" />
+        <activity
+            android:name=".ActivityWelcome"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".penerima_home"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

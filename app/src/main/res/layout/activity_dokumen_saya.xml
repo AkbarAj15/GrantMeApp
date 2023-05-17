@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".dokumen_saya">
+
+    <TextView
+        android:id="@+id/textDokumenSaya"
+        android:layout_width="302dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Dokumen Saya"
+        android:textColor="#161C2B"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.275"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statuspengguna3" />
+
+    <TextView
+        android:id="@+id/namapengguna4"
+        android:layout_width="209dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:hint="nama pengguna"
+        android:paddingStart="1dp"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        android:textColorHint="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/fotoprofil"
+        app:layout_constraintTop_toBottomOf="@id/labelnale11" />
+
+    <ImageView
+        android:id="@+id/fotoprofil"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/def_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/labelnale11"
+        tools:src="@drawable/default_profile" />
+
+    <ImageButton
+        android:id="@+id/backregispenerima4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.072"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.045"
+        app:srcCompat="@drawable/arrow_back" />
+
+    <TextView
+        android:id="@+id/statuspengguna3"
+        android:layout_width="186dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="16dp"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:hint="statuspengguna"
+
+        android:paddingStart="1dp"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        android:textColorHint="#1E1EAE"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/fotoprofil"
+        app:layout_constraintTop_toBottomOf="@+id/namapengguna4" />
+
+    <TextView
+        android:id="@+id/labelnale11"
+        android:layout_width="55dp"
+        android:layout_height="24dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Profil"
+        android:textColor="#161C2B"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.045" />
+
+    <ScrollView
+        android:layout_width="411dp"
+        android:layout_height="534dp"
+        app:layout_constraintBottom_toBottomOf="@id/bawahbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textDokumenSaya">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="500dp">
+            <TextView
+                android:id="@+id/labelnale10"
+                android:layout_width="178dp"
+                android:layout_height="23dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="left"
+                android:text="KTP"
+                android:textColor="#161C2B"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/simpandokumen"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/statustranskrip"
+                android:layout_width="116dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="30dp"
+                android:ems="10"
+                android:fontFamily="@font/poppins"
+                android:gravity="right"
+                android:hint="statusijazah"
+                android:paddingStart="1dp"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"
+                android:textColorHint="#1E1EAE"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view7" />
+
+            <TextView
+                android:id="@+id/labelnale12"
+                android:layout_width="178dp"
+                android:layout_height="23dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="left"
+                android:text="Transkrip Nilai"
+                android:textColor="#161C2B"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view7" />
+
+            <TextView
+                android:id="@+id/statusfoto"
+                android:layout_width="116dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="30dp"
+                android:ems="10"
+                android:fontFamily="@font/poppins"
+                android:gravity="right"
+                android:hint="statusfoto"
+                android:paddingStart="1dp"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"
+                android:textColorHint="#1E1EAE"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+            <ImageButton
+                android:id="@+id/upijazah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/statusijazah"
+                app:srcCompat="@drawable/icon_butupl" />
+
+            <ImageButton
+                android:id="@+id/upfoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/statusfoto"
+                app:srcCompat="@drawable/icon_butupl" />
+
+            <TextView
+                android:id="@+id/statusktp"
+                android:layout_width="116dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="30dp"
+                android:ems="10"
+                android:fontFamily="@font/poppins"
+                android:gravity="right"
+                android:hint="statusktp"
+                android:paddingStart="1dp"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"
+                android:textColorHint="#1E1EAE"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/uptranskrip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/statustranskrip"
+                app:srcCompat="@drawable/icon_butupl" />
+
+            <ImageButton
+                android:id="@+id/upktp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/statusktp"
+                app:srcCompat="@drawable/icon_butupl" />
+
+            <TextView
+                android:id="@+id/labelnale13"
+                android:layout_width="178dp"
+                android:layout_height="23dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="left"
+                android:text="Foto Diri"
+                android:textColor="#161C2B"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+            <TextView
+                android:id="@+id/statuskk"
+                android:layout_width="116dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="30dp"
+                android:ems="10"
+                android:fontFamily="@font/poppins"
+                android:gravity="right"
+                android:hint="statuskk"
+                android:paddingStart="1dp"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"
+                android:textColorHint="#1E1EAE"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+            <TextView
+                android:id="@+id/statusijazah"
+                android:layout_width="116dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="30dp"
+                android:ems="10"
+                android:fontFamily="@font/poppins"
+                android:gravity="right"
+                android:hint="statusijazah"
+                android:paddingStart="1dp"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"
+                android:textColorHint="#1E1EAE"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+            <TextView
+                android:id="@+id/labelnale14"
+                android:layout_width="178dp"
+                android:layout_height="23dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="left"
+
+                android:text="Ijazah"
+                android:textColor="#161C2B"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+            <ImageButton
+                android:id="@+id/upkk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/statuskk"
+                app:srcCompat="@drawable/icon_butupl" />
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="380dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="16dp"
+                android:background="#EAEAEA"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.454"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/upktp" />
+
+            <TextView
+                android:id="@+id/labelnale16"
+                android:layout_width="178dp"
+                android:layout_height="23dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/poppins_semibold"
+
+                android:gravity="left"
+                android:text="Kartu Keluarga"
+                android:textColor="#161C2B"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="380dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="16dp"
+                android:background="#EAEAEA"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/upkk" />
+
+            <View
+                android:id="@+id/view6"
+                android:layout_width="380dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="16dp"
+                android:background="#EAEAEA"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/upfoto" />
+
+            <View
+                android:id="@+id/view7"
+                android:layout_width="380dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="16dp"
+                android:background="#EAEAEA"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/upijazah" />
+
+            <View
+                android:id="@+id/view8"
+                android:layout_width="380dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="16dp"
+                android:background="#EAEAEA"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.483"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/uptranskrip" />
+
+            <Button
+                android:id="@+id/simpandokumen"
+                android:layout_width="359dp"
+                android:layout_height="47dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="44dp"
+                android:background="@drawable/button_daftar"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center"
+                android:text="Simpan"
+                android:textAllCaps="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view8"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <View
+                android:id="@+id/bawahbutton"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="16dp"
+                android:background="#00EAEAEA"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/simpandokumen" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
