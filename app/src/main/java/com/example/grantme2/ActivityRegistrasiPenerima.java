@@ -25,11 +25,13 @@ public class ActivityRegistrasiPenerima extends AppCompatActivity {
     ImageButton btnKembali;
     // objek untuk mengkoneksikan firebase
     private DatabaseReference mDatabase;
+    // membuat userId
+    private int userId = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrasi_penerima);
-        mDatabase = FirebaseDatabase.getInstance().getReference();
+        mDatabase = FirebaseDatabase.getInstance().getReference("Pengguna");
         // Kembali ke Halaman Pilihan Penyedia atau penerima
         btnKembali = findViewById(R.id.backregispenerima);
         btnKembali.setOnClickListener(new View.OnClickListener() {
@@ -41,6 +43,8 @@ public class ActivityRegistrasiPenerima extends AppCompatActivity {
         });
         // membuat objek edtiText namalengkap, sehingga dapat diisi
         edtNama = findViewById(R.id.edtNamalengkap);
+        edtEmail = findViewById(R.id.emailpenerima);
+        edtNoTelp = findViewById(R.id.notelepon);
 
         // objek tampil pilihan ttl penerima
         texttl = findViewById(R.id.ttlpenerima);
@@ -76,14 +80,26 @@ public class ActivityRegistrasiPenerima extends AppCompatActivity {
         btnLanjut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-
+                // mengambil nilai edittext kedalam String
+                String namaLengkap = edtNama.getText().toString();
+                String email = edtEmail.getText().toString();
+                String noTelp = edtNoTelp.getText().toString();
+                String ttl = texttl.getText().toString();
+                String jenKel = textjenkel.getText().toString();
+                // membuat nilai nya ke halaman selanjutnya
+                Penerima penerima = new Penerima(namaLengkap, email, noTelp,
+                        ttl, jenKel);
+                String userIdString1 = String.valueOf(userId);
+                mDatabase.child("Penerima").child(userIdString1).setValue(penerima);
                 // Save the Penerima object to the Firebase database
-
-
                 // Navigate to the next activity
                 Intent intent = new Intent(ActivityRegistrasiPenerima.this, ActivityBuatUsername.class);
                 startActivity(intent);
+                //membuat intent untuk mengirimkan nilai ke halaman buat username
+                Intent i = new Intent(ActivityRegistrasiPenerima.this, ActivityBuatUsername.class);
+                i.putExtra("userId", userId);
+                startActivity(intent);
+                userId++;
 
             }
         });

@@ -49,7 +49,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textDaftar2" />
 
     <EditText
-        android:id="@+id/buatusername"
+        android:id="@+id/buatusername2"
         android:layout_width="340dp"
         android:layout_height="46dp"
         android:layout_alignParentStart="true"
@@ -83,10 +83,10 @@
         android:textColor="#161C2B"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buatusername" />
+        app:layout_constraintTop_toBottomOf="@+id/buatusername2" />
 
     <EditText
-        android:id="@+id/buatpassword"
+        android:id="@+id/buatpassword2"
         android:layout_width="340dp"
         android:layout_height="46dp"
         android:layout_alignParentStart="true"

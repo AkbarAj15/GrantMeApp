@@ -1,13 +1,10 @@
 package com.example.grantme2;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -68,7 +65,7 @@ public class penerima_FragHome extends Fragment {
         }
         gridView = getView().findViewById(R.id.grid_home);
         dataList = new ArrayList<>();
-        adapter = new MyAdapter(this.dataList);
+        adapter = new MyAdapter(penerima_FragHome.this, dataList);
         gridView.setAdapter(adapter);
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
