@@ -15,33 +15,27 @@
         tools:targetApi="31">
         <activity
             android:name=".UploadActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true"/>
         <activity
             android:name=".penyedia_TambahBeasiswa"
-            android:exported="true">
-        </activity>
+            android:exported="true"/>
         <activity
             android:name=".ActivityProfile"
-            android:exported="true">
-        </activity>
+            android:exported="true"/>
         <activity
             android:name=".penyedia_home"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"/>
         <activity
             android:name=".BuatUsername2"
-            android:exported="true">
-        </activity>
+            android:exported="true"/>
+
         <activity
             android:name=".penerima_profil_bantuan"
-            android:exported="true">
-        </activity>
+            android:exported="true"/>
+
         <activity
             android:name=".penerima_profil_dokumenSaya"
-            android:exported="true">
-        </activity>
+            android:exported="true"/>
         <activity
             android:name=".penerima_profil_informasi_pribadi"
             android:exported="true" />
@@ -63,31 +57,18 @@
         <activity
             android:name=".ActivityWelcome"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".penerima_home"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
+            android:exported="true"/>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
