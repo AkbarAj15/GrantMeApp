@@ -58,6 +58,6 @@ public class penyedia_FragProfil extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_penyedia__frag_profil, container, false);
+        return inflater.inflate(R.layout.fragment_penyedia__profil, container, false);
     }
 }

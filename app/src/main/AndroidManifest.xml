@@ -35,15 +35,15 @@
             android:exported="true">
         </activity>
         <activity
-            android:name=".bantuan"
+            android:name=".penerima_profil_bantuan"
             android:exported="true">
         </activity>
         <activity
-            android:name=".dokumen_saya"
+            android:name=".penerima_profil_dokumenSaya"
             android:exported="true">
         </activity>
         <activity
-            android:name=".informasi_pribadi"
+            android:name=".penerima_profil_informasi_pribadi"
             android:exported="true" />
         <activity
             android:name=".login"

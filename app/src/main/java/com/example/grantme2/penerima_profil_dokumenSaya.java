@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class bantuan extends AppCompatActivity {
+public class penerima_profil_dokumenSaya extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bantuan);
+        setContentView(R.layout.activity_dokumen_saya);
     }
 }

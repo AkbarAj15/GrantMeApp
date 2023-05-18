@@ -62,7 +62,7 @@ public class penerima_FragProfil extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profil, container, false);
+        return inflater.inflate(R.layout.fragment_penerima_profil, container, false);
 
     }
     @Override
@@ -79,7 +79,7 @@ public class penerima_FragProfil extends Fragment {
         txtInformasi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getContext(), informasi_pribadi.class);
+                Intent i = new Intent(getContext(), penerima_profil_informasi_pribadi.class);
                 startActivity(i);
             }
         });
@@ -87,7 +87,7 @@ public class penerima_FragProfil extends Fragment {
         txtDokumen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getContext(), dokumen_saya.class);
+                Intent i = new Intent(getContext(), penerima_profil_dokumenSaya.class);
                 startActivity(i);
             }
         });
@@ -95,7 +95,7 @@ public class penerima_FragProfil extends Fragment {
         txtBantuan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getContext(), bantuan.class);
+                Intent i = new Intent(getContext(), penerima_profil_bantuan.class);
                 startActivity(i);
             }
         });

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".informasi_pribadi">
+    tools:context=".penerima_profil_informasi_pribadi">
 
     <Button
         android:id="@+id/keluarprofil2"

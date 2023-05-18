@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class informasi_pribadi extends AppCompatActivity {
+public class penerima_profil_bantuan extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_informasi_pribadi);
+        setContentView(R.layout.activity_bantuan);
     }
 }
