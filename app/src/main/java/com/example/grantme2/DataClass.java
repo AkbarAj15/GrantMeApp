@@ -39,4 +39,8 @@ public class DataClass {
         this.namaBeasiswa = namaBeasiswa;
         this.sisaWaktu = sisaWaktu;
     }
+
+    public String getCaption() {
+        return namaBeasiswa;
+    }
 }
