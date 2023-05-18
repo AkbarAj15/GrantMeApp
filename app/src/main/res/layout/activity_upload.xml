@@ -45,7 +45,8 @@
                 android:layout_weight="0.6"
                 android:background="#F8F8F8"
                 android:hint="Add a caption..."
-                android:padding="16dp" />
+                android:padding="16dp"
+                android:textColor="@color/black"/>
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/uploadButton"
