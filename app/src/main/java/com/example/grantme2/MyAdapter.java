@@ -16,6 +16,7 @@ public class MyAdapter extends BaseAdapter {
         this.context = context;
         this.dataList = dataList;
     }
+
     @Override
     public int getCount() {
         return dataList.size();

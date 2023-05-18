@@ -8,6 +8,11 @@ public class DataClass {
     public DataClass(String imageURL, String caption) {
 
     }
+    public DataClass(String imageURL, String namaBeasiswa, String sisaWaktu) {
+        this.imageURL = imageURL;
+        this.namaBeasiswa = namaBeasiswa;
+        this.sisaWaktu = sisaWaktu;
+    }
 
     public String getImageURL() {
         return imageURL;
@@ -34,11 +39,7 @@ public class DataClass {
     }
 
 
-    public DataClass(String imageURL, String namaBeasiswa, String sisaWaktu) {
-        this.imageURL = imageURL;
-        this.namaBeasiswa = namaBeasiswa;
-        this.sisaWaktu = sisaWaktu;
-    }
+
 
     public String getCaption() {
         return namaBeasiswa;

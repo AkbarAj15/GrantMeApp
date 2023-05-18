@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.GridView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -63,23 +64,7 @@ public class penerima_FragHome extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-        gridView = getView().findViewById(R.id.grid_home);
-        dataList = new ArrayList<>();
-        //adapter = new MyAdapter(penerima_FragHome.this, dataList);
-        gridView.setAdapter(adapter);
-        databaseReference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-                    DataClass dataClass = dataSnapshot.getValue(DataClass.class);
-                    dataList.add(dataClass);
-                }
-                adapter.notifyDataSetChanged();
-            }
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-            }
-        });
+
     }
 
     @Override
@@ -92,5 +77,26 @@ public class penerima_FragHome extends Fragment {
     private ArrayList<DataClass> dataList;
     private MyAdapter adapter;
     final private DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Images");
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        gridView = view.findViewById(R.id.grid_home);
+        dataList = new ArrayList<>();
+        adapter = new MyAdapter(getActivity(), dataList);
+        gridView.setAdapter(adapter);
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                    DataClass dataClass = dataSnapshot.getValue(DataClass.class);
+                    dataList.add(dataClass);
+                }
+                adapter.notifyDataSetChanged();
+            }
 
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+            }
+        });
+    }
 }
