@@ -28,7 +28,7 @@ public class BuatUsername2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buat_username2);
         // firbase data koneksi
-        mDatabase = FirebaseDatabase.getInstance().getReference("Penyedia");
+        mDatabase = FirebaseDatabase.getInstance().getReference("Pengguna");
         int userId = getIntent().getIntExtra("userId", 1);
         // tombol kembali ke halaman *RegistrasiPenerima
         btnKembali = findViewById(R.id.backbuatusername);
@@ -52,8 +52,8 @@ public class BuatUsername2 extends AppCompatActivity {
                 // mengenkripsi username dan password menggunakan AES algoritma
                 String encryptedUsername = AES.encrypt(username);
                 String encryptedPassword = AES.encrypt(password);
-                mDatabase.child(String.valueOf(userId)).child("username").setValue(encryptedUsername);
-                mDatabase.child(String.valueOf(userId)).child("password").setValue(encryptedPassword);
+                mDatabase.child("Penyedia").child(String.valueOf(userId)).child("username").setValue(encryptedUsername);
+                mDatabase.child("Penyedia").child(String.valueOf(userId)).child("password").setValue(encryptedPassword);
                 // memberikan objek untuk class AES sehingga data diambil di AES
                 Toast.makeText(BuatUsername2.this, "Registrasi Anda Berhasil!", Toast.LENGTH_LONG).show();
                 // membuat intent untuk ke halaman home
