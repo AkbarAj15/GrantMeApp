@@ -95,7 +95,7 @@ public class UploadActivity extends AppCompatActivity {
                         databaseReference.child(key).setValue(dataClass);
                         progressBar.setVisibility(View.INVISIBLE);
                         Toast.makeText(UploadActivity.this, "Uploaded", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(UploadActivity.this, MainActivity.class);
+                        Intent intent = new Intent(UploadActivity.this, penyedia_TambahBeasiswa.class);
                         startActivity(intent);
                         finish();
                     }

@@ -38,7 +38,6 @@ public class penerima_FragHome extends Fragment {
     public penerima_FragHome() {
         // Required empty public constructor
     }
-
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
@@ -66,7 +65,6 @@ public class penerima_FragHome extends Fragment {
         }
 
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
         // Inflate the layout for this fragment

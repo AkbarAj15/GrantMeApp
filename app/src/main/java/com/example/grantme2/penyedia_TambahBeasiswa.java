@@ -21,7 +21,7 @@ public class penyedia_TambahBeasiswa extends AppCompatActivity {
     ImageButton uploadPoster;
     private Uri imageUri;
     Button btntambahbea;
-    final private DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("poster");
+    final private DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Images");
     final private StorageReference storageReference = FirebaseStorage.getInstance().getReference();
 
     @Override
@@ -49,11 +49,7 @@ public class penyedia_TambahBeasiswa extends AppCompatActivity {
         uploadPoster.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-
                 // Save the Penerima object to the Firebase database
-
-
                 // Navigate to the next activity
                 Intent i = new Intent(getApplicationContext(), UploadActivity.class);
                 startActivity(i);
