@@ -2,16 +2,23 @@ package com.example.grantme2;
 
 public class DataClass {
     public String imageURL;
-    public String namaBeasiswa;
-    public String sisaWaktu;
+    public String caption;
 
-    public DataClass(String imageURL, String caption) {
+    public DataClass() {
 
     }
-    public DataClass(String imageURL, String namaBeasiswa, String sisaWaktu) {
+
+    public DataClass(String imageURL, String caption) {
         this.imageURL = imageURL;
-        this.namaBeasiswa = namaBeasiswa;
-        this.sisaWaktu = sisaWaktu;
+        this.caption = caption;
+    }
+
+    public String getCaption() {
+        return caption;
+    }
+
+    public void setCaption(String caption) {
+        this.caption = caption;
     }
 
     public String getImageURL() {
@@ -22,26 +29,6 @@ public class DataClass {
         this.imageURL = imageURL;
     }
 
-    public String getNamaBeasiswa() {
-        return namaBeasiswa;
-    }
-
-    public void setNamaBeasiswa(String namaBeasiswa) {
-        this.namaBeasiswa = namaBeasiswa;
-    }
-
-    public String getSisaWaktu() {
-        return sisaWaktu;
-    }
-
-    public void setSisaWaktu(String sisaWaktu) {
-        this.sisaWaktu = sisaWaktu;
-    }
 
 
-
-
-    public String getCaption() {
-        return namaBeasiswa;
-    }
 }
