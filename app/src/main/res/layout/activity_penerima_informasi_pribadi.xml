@@ -46,16 +46,16 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="26dp"
         android:layout_marginTop="11dp"
         android:background="@drawable/form_daftar"
         android:ems="10"
         android:fontFamily="@font/poppins"
-        android:hint="dawdaw"
-        android:paddingStart="2dp"
+        android:hint="Nama Lengkap"
+        android:paddingStart="15dp"
         android:textColor="@color/black"
         android:textColorHint="#A3A3AE"
         android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/labelnale15" />
 
@@ -80,7 +80,6 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="26dp"
         android:layout_marginTop="11dp"
         android:background="@drawable/form_daftar"
         android:ems="10"
@@ -92,6 +91,7 @@
         android:textColor="@color/black"
         android:textColorHint="#A3A3AE"
         android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/labelttl3" />
 
@@ -106,7 +106,7 @@
         android:textColor="#161C2B"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/jenkel3" />
+        app:layout_constraintTop_toBottomOf="@+id/jenkelinformasipribadi" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -151,14 +151,13 @@
         app:layout_constraintTop_toBottomOf="@+id/emailpenerima3" />
 
     <EditText
-        android:id="@+id/jenkel3"
+        android:id="@+id/jenkelinformasipribadi"
         android:layout_width="340dp"
         android:layout_height="46dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="26dp"
         android:layout_marginTop="11dp"
         android:background="@drawable/form_daftar"
         android:drawableRight="@drawable/arrow_dropdown"
@@ -171,6 +170,7 @@
         android:textColor="@color/black"
         android:textColorHint="#A3A3AE"
         android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/labeljenkel3" />
 
@@ -227,7 +227,6 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="26dp"
         android:layout_marginTop="11dp"
         android:background="@drawable/form_daftar"
         android:ems="10"
@@ -239,6 +238,7 @@
         android:textColor="@color/black"
         android:textColorHint="#A3A3AE"
         android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/labelemail3" />
 
@@ -250,7 +250,6 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="26dp"
         android:layout_marginTop="11dp"
         android:background="@drawable/form_daftar"
         android:ems="10"
@@ -262,6 +261,7 @@
         android:textColor="@color/black"
         android:textColorHint="#A3A3AE"
         android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/labelnotel3" />
 
