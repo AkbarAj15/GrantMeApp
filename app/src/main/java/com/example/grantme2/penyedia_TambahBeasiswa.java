@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -16,7 +17,8 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
 public class penyedia_TambahBeasiswa extends AppCompatActivity {
-    EditText tanggalBuka, tanggalTutup, uploadButton, uploadCaption,uploadPoster;
+    EditText tanggalBuka, tanggalTutup, uploadButton, uploadCaption;
+    ImageButton uploadPoster;
     private Uri imageUri;
     Button btntambahbea;
     final private DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("poster");
@@ -29,8 +31,7 @@ public class penyedia_TambahBeasiswa extends AppCompatActivity {
 
         btntambahbea = findViewById(R.id.btntambahbeasiswa);
         uploadCaption = findViewById(R.id.inputnamabeasiswa);
-        uploadPoster = findViewById(R.id.unggahposter);
-
+        uploadPoster = findViewById(R.id.btnunggahpost);
         tanggalBuka = findViewById(R.id.tanggalbuka);
         tanggalBuka.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -45,7 +46,7 @@ public class penyedia_TambahBeasiswa extends AppCompatActivity {
                 TampilTanggal1();
             }
         });
-        btntambahbea.setOnClickListener(new View.OnClickListener() {
+        uploadPoster.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -54,8 +55,8 @@ public class penyedia_TambahBeasiswa extends AppCompatActivity {
 
 
                 // Navigate to the next activity
-                Intent intent = new Intent(penyedia_TambahBeasiswa.this, UploadActivity.class);
-                startActivity(intent);
+                Intent i = new Intent(getApplicationContext(), UploadActivity.class);
+                startActivity(i);
 
             }
         });

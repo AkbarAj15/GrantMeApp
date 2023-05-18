@@ -65,7 +65,7 @@ public class penerima_FragHome extends Fragment {
         }
         gridView = getView().findViewById(R.id.grid_home);
         dataList = new ArrayList<>();
-        adapter = new MyAdapter(penerima_FragHome.this, dataList);
+        //adapter = new MyAdapter(penerima_FragHome.this, dataList);
         gridView.setAdapter(adapter);
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
