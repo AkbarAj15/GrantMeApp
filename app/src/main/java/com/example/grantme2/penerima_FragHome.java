@@ -95,6 +95,7 @@ public class penerima_FragHome extends Fragment {
                     DataClass dataClass = dataSnapshot.getValue(DataClass.class);
                     dataList.add(dataClass);
                 }
+                adapter2.notifyDataSetChanged();
                 adapter.notifyDataSetChanged();
             }
 
