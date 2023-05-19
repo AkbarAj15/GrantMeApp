@@ -74,6 +74,7 @@ public class penerima_FragHome extends Fragment {
     private GridView gridView, gridView_atas;
     private ArrayList<DataClass> dataList;
     private MyAdapter adapter;
+    private  AdapterGrid adapter2;
     final private DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Images");
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -81,9 +82,12 @@ public class penerima_FragHome extends Fragment {
         gridView = view.findViewById(R.id.grid_home);
         gridView_atas = view.findViewById(R.id.grid_image_horizontal);
         dataList = new ArrayList<>();
+
         adapter = new MyAdapter(getActivity(), dataList);
+        adapter2 = new AdapterGrid(getActivity(),dataList);
+
         gridView.setAdapter(adapter);
-        gridView_atas.setAdapter(adapter);
+        gridView_atas.setAdapter(adapter2);
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
