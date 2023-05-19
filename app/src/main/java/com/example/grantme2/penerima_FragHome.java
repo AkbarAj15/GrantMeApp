@@ -71,7 +71,7 @@ public class penerima_FragHome extends Fragment {
         return inflater.inflate(R.layout.fragment_penerima_home, container, false);
     }
     FloatingActionButton fab;
-    private GridView gridView;
+    private GridView gridView, gridView_atas;
     private ArrayList<DataClass> dataList;
     private MyAdapter adapter;
     final private DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Images");
@@ -79,9 +79,11 @@ public class penerima_FragHome extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         gridView = view.findViewById(R.id.grid_home);
+        gridView_atas = view.findViewById(R.id.grid_image_horizontal);
         dataList = new ArrayList<>();
         adapter = new MyAdapter(getActivity(), dataList);
         gridView.setAdapter(adapter);
+        gridView_atas.setAdapter(adapter);
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
