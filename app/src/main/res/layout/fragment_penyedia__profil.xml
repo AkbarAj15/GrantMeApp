@@ -141,7 +141,6 @@
         android:id="@+id/txtProfile2"
         android:layout_width="55dp"
         android:layout_height="24dp"
-        android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins_medium"
         android:text="Profil"
         android:textColor="#161C2B"
@@ -150,5 +149,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.062" />
+        app:layout_constraintVertical_bias="0.073" />
 </androidx.constraintlayout.widget.ConstraintLayout>
