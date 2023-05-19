@@ -9,13 +9,7 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="50dp" />
+
 
     <Button
         android:id="@+id/keluarprofil"
@@ -40,14 +34,15 @@
         android:layout_width="302dp"
         android:layout_height="33dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/poppins_bold"
         android:text="Pengaturan Akun"
         android:textColor="#161C2B"
         android:textSize="18sp"
+
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/statuspengguna" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statuspenerima" />
 
     <TextView
         android:id="@+id/textDaftar6"
@@ -127,7 +122,7 @@
         android:text="Kata Sandi"
         android:textColor="#161C2B"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dokumen" />
 
@@ -162,7 +157,7 @@
         tools:src="@drawable/default_profile" />
 
     <TextView
-        android:id="@+id/namapengguna"
+        android:id="@+id/namapenerima"
         android:layout_width="209dp"
         android:layout_height="31dp"
         android:layout_marginStart="16dp"
@@ -179,7 +174,7 @@
         app:layout_constraintTop_toBottomOf="@id/txtProfile" />
 
     <TextView
-        android:id="@+id/statuspengguna"
+        android:id="@+id/statuspenerima"
         android:layout_width="186dp"
         android:layout_height="28dp"
         android:layout_marginStart="16dp"
@@ -193,19 +188,19 @@
 
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/namapengguna" />
+        app:layout_constraintTop_toBottomOf="@+id/namapenerima" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:constraint_referenced_ids="namapengguna,statuspengguna" />
+        app:constraint_referenced_ids="namapenerima,statuspenerima" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/group2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:constraint_referenced_ids="namapengguna,statuspengguna" />
+        app:constraint_referenced_ids="namapenerima,statuspenerima" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

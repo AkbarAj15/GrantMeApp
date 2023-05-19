@@ -35,7 +35,7 @@ public class penyedia_home extends AppCompatActivity {
 
         getSupportFragmentManager()
                 .beginTransaction().setReorderingAllowed(true)
-                .replace(R.id.fragmentContainer, penerima_FragHome.class,null)
+                .replace(R.id.fragmentContainer, penyedia_FragHome.class,null)
                 .commit();
 
         penerima_home.setOnClickListener(new View.OnClickListener() {

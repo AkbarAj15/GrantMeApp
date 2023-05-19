@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -14,28 +16,29 @@
         android:theme="@style/Theme.Design.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".penyedia_profil_informasiPribadi"
+            android:exported="false" />
+        <activity
             android:name=".UploadActivity"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".penyedia_TambahBeasiswa"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".ActivityProfile"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".penyedia_home"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".BuatUsername2"
-            android:exported="true"/>
-
+            android:exported="true" />
         <activity
             android:name=".penerima_profil_bantuan"
-            android:exported="true"/>
-
+            android:exported="true" />
         <activity
             android:name=".penerima_profil_dokumenSaya"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".penerima_profil_informasi_pribadi"
             android:exported="true" />
@@ -56,27 +59,26 @@
             android:exported="true" />
         <activity
             android:name=".ActivityWelcome"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".penerima_home"
-            android:exported="true"/>
+            android:exported="true" />
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
         <meta-data
             android:name="com.google.firebase.database.DatabaseUrl"
-            android:value="https://your-database-url.firebaseio.com" />
-
-        <!-- di dalam tag <application> -->
+            android:value="https://your-database-url.firebaseio.com" /> <!-- di dalam tag <application> -->
         <service
             android:name="com.google.firebase.components.ComponentDiscoveryService"
             android:directBootAware="true"

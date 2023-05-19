@@ -1,14 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".penyedia_FragProfil">
+    tools:context=".penyedia_FragProfil"
+    android:background="@color/white">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
-</FrameLayout>
+
+    <Button
+        android:id="@+id/keluarprofil3"
+        android:layout_width="359dp"
+        android:layout_height="47dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="88dp"
+        android:background="@drawable/button_daftar"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center"
+        android:text="Keluar"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textDaftar8"
+        android:layout_width="302dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Lainnya"
+        android:textColor="#161C2B"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/informasiPribadi2" />
+
+    <TextView
+        android:id="@+id/textDaftar9"
+        android:layout_width="302dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Pengaturan Akun"
+
+        android:textColor="#161C2B"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statuspenyedia" />
+
+    <TextView
+        android:id="@+id/bantuan2"
+        android:layout_width="344dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="20dp"
+        android:drawableLeft="@drawable/icon_bantuan"
+        android:drawableRight="@drawable/arrow_forward"
+        android:drawablePadding="12dp"
+        android:fontFamily="@font/poppins"
+        android:paddingStart="2dp"
+        android:paddingTop="5dp"
+        android:text="Bantuan"
+        android:textColor="#161C2B"
+
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textDaftar8" />
+
+    <ImageView
+        android:id="@+id/fotopenyedia"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/def_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtProfile2"
+        tools:src="@drawable/default_profile" />
+
+    <TextView
+        android:id="@+id/informasiPribadi2"
+        android:layout_width="344dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="20dp"
+        android:drawableLeft="@drawable/icon_infoprib"
+        android:drawableRight="@drawable/arrow_forward"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/poppins"
+        android:paddingTop="5dp"
+        android:text="Informasi Pribadi"
+        android:textColor="#161C2B"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textDaftar9" />
+
+    <TextView
+        android:id="@+id/statuspenyedia"
+        android:layout_width="186dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="16dp"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:hint="statuspengguna"
+        android:paddingStart="1dp"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        android:textColorHint="#1E1EAE"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/fotopenyedia"
+        app:layout_constraintTop_toBottomOf="@+id/namapenyedia" />
+
+    <TextView
+        android:id="@+id/namapenyedia"
+        android:layout_width="209dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:hint="nama pengguna"
+        android:paddingStart="1dp"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        android:textColorHint="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/fotopenyedia"
+        app:layout_constraintTop_toBottomOf="@+id/txtProfile2" />
+
+    <TextView
+        android:id="@+id/txtProfile2"
+        android:layout_width="55dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Profil"
+        android:textColor="#161C2B"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.062" />
+</androidx.constraintlayout.widget.ConstraintLayout>
