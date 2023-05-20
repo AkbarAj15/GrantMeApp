@@ -34,8 +34,8 @@ public class AES {
 
     public static String decrypt(String encrypted) {
         try {
-            IvParameterSpec iv = new IvParameterSpec(INIT_VECTOR.getBytes("UTF-8"));
-            SecretKeySpec keySpec = new SecretKeySpec(AES_KEY_256_BIT.getBytes("UTF-8"), "AES");
+            IvParameterSpec iv = new IvParameterSpec(INIT_VECTOR.getBytes());
+            SecretKeySpec keySpec = new SecretKeySpec(AES_KEY_256_BIT.getBytes(), "AES");
 
             Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5PADDING");
             cipher.init(Cipher.DECRYPT_MODE, keySpec, iv);

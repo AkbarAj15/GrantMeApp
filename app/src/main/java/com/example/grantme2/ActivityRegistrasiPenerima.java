@@ -17,6 +17,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import kodeJava.Penerima;
+
 public class ActivityRegistrasiPenerima extends AppCompatActivity {
     Button btnLanjut;
     EditText edtNama, edtEmail, edtNoTelp, textjenkel, texttl;
@@ -31,7 +33,7 @@ public class ActivityRegistrasiPenerima extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrasi_penerima);
-        mDatabase = FirebaseDatabase.getInstance().getReference("Pengguna");
+        mDatabase = FirebaseDatabase.getInstance().getReference("Penerima");
         // Kembali ke Halaman Pilihan Penyedia atau penerima
         btnKembali = findViewById(R.id.backregispenerima);
         btnKembali.setOnClickListener(new View.OnClickListener() {
@@ -90,7 +92,7 @@ public class ActivityRegistrasiPenerima extends AppCompatActivity {
                 Penerima penerima = new Penerima(namaLengkap, email, noTelp,
                         ttl, jenKel);
                 String userIdString1 = String.valueOf(userId);
-                mDatabase.child("Penerima").child(userIdString1).setValue(penerima);
+                mDatabase.child(userIdString1).setValue(penerima);
                 // Save the Penerima object to the Firebase database
                 // Navigate to the next activity
                 Intent intent = new Intent(ActivityRegistrasiPenerima.this, ActivityBuatUsername.class);
