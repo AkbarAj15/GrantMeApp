@@ -6,4 +6,255 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:backgroundTint="@color/white"
-    tools:context=".penyedia_profil_informasiPribadi"/>
+    tools:context=".penyedia_profil_informasiPribadi">
+
+
+    <Button
+        android:id="@+id/keluarprofil4"
+        android:layout_width="359dp"
+        android:layout_height="47dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button_daftar"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center"
+        android:text="Simpan"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/notelepon2"
+        android:layout_width="340dp"
+        android:layout_height="46dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/form_daftar"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:hint="Password"
+        android:inputType="number"
+        android:padding="5dp"
+        android:paddingStart="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="#A3A3AE"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelnotel8" />
+
+    <EditText
+        android:id="@+id/ttlpenerima2"
+        android:layout_width="340dp"
+        android:layout_height="46dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/form_daftar"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:hint="Email"
+        android:inputType="date"
+        android:padding="5dp"
+        android:paddingStart="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="#A3A3AE"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labeljenkel2" />
+
+    <EditText
+        android:id="@+id/jenkelinformasipribadi2"
+        android:layout_width="340dp"
+        android:layout_height="46dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="11dp"
+
+        android:background="@drawable/form_daftar"
+        android:ems="10"
+        android:focusableInTouchMode="true"
+        android:fontFamily="@font/poppins"
+        android:hint=" username"
+        android:padding="5dp"
+        android:paddingStart="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="#A3A3AE"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelttl2" />
+
+    <TextView
+        android:id="@+id/labelttl2"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="11dp"
+        android:fontFamily="@font/poppins"
+        android:text="Username"
+        android:textColor="#161C2B"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/namalengkap" />
+
+    <EditText
+        android:id="@+id/namalengkap"
+        android:layout_width="340dp"
+        android:layout_height="46dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/form_daftar"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:hint="Nama Instansi"
+        android:paddingStart="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="#A3A3AE"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelnale20" />
+
+    <TextView
+        android:id="@+id/labeljenkel2"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="11dp"
+        android:fontFamily="@font/poppins"
+        android:text="Email"
+        android:textColor="#161C2B"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notelepon2" />
+
+    <TextView
+        android:id="@+id/statuspengguna"
+        android:layout_width="186dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="16dp"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:hint="statuspengguna"
+        android:paddingStart="1dp"
+        android:paddingTop="1dp"
+
+        android:paddingBottom="1dp"
+        android:textColorHint="#1E1EAE"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/namapengguna" />
+
+    <ImageButton
+        android:id="@+id/backregispenerima2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.072"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.045"
+        app:srcCompat="@drawable/arrow_back" />
+
+    <TextView
+        android:id="@+id/namapengguna"
+        android:layout_width="209dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:hint="nama pengguna"
+
+        android:paddingStart="1dp"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        android:textColorHint="#000000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/labelnale19" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/def_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelnale19"
+        tools:src="@drawable/default_profile" />
+
+    <TextView
+        android:id="@+id/textDaftar10"
+        android:layout_width="302dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Informasi Pribadi"
+        android:textColor="#161C2B"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.293"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statuspengguna" />
+
+    <TextView
+        android:id="@+id/labelnotel8"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="11dp"
+        android:fontFamily="@font/poppins"
+        android:text="Password"
+        android:textColor="#161C2B"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/jenkelinformasipribadi2" />
+
+    <TextView
+        android:id="@+id/labelnale19"
+        android:layout_width="55dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Profil"
+        android:textColor="#161C2B"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/labelnale20"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins"
+        android:text="Nama Instansi"
+        android:textColor="#161C2B"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textDaftar10" />
+</androidx.constraintlayout.widget.ConstraintLayout>
