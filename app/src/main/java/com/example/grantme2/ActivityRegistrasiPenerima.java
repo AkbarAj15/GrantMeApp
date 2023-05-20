@@ -33,7 +33,7 @@ public class ActivityRegistrasiPenerima extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrasi_penerima);
-        mDatabase = FirebaseDatabase.getInstance().getReference("Penerima");
+        mDatabase = FirebaseDatabase.getInstance().getReference("Pengguna");
         // Kembali ke Halaman Pilihan Penyedia atau penerima
         btnKembali = findViewById(R.id.backregispenerima);
         btnKembali.setOnClickListener(new View.OnClickListener() {
@@ -92,15 +92,12 @@ public class ActivityRegistrasiPenerima extends AppCompatActivity {
                 Penerima penerima = new Penerima(namaLengkap, email, noTelp,
                         ttl, jenKel);
                 String userIdString1 = String.valueOf(userId);
-                mDatabase.child(userIdString1).setValue(penerima);
+                mDatabase.child("Penerima").child(userIdString1).setValue(penerima);
                 // Save the Penerima object to the Firebase database
-                // Navigate to the next activity
-                Intent intent = new Intent(ActivityRegistrasiPenerima.this, ActivityBuatUsername.class);
-                startActivity(intent);
                 //membuat intent untuk mengirimkan nilai ke halaman buat username
                 Intent i = new Intent(ActivityRegistrasiPenerima.this, ActivityBuatUsername.class);
                 i.putExtra("userId", userId);
-                startActivity(intent);
+                startActivity(i);
                 userId++;
 
             }

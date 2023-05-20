@@ -1,8 +1,8 @@
 package com.example.grantme2;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class penyedia_profil_informasiPribadi extends AppCompatActivity {
 

@@ -27,7 +27,7 @@ public class ActivityBuatUsername extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buat_username);
         // menghubungkan firebase
-        mDatabase = FirebaseDatabase.getInstance().getReference("Penerima");
+        mDatabase = FirebaseDatabase.getInstance().getReference("Pengguna");
         int userId = getIntent().getIntExtra("userId", 1);
         // tombol kembali ke halaman *RegistrasiPenerima
         btnKembali = findViewById(R.id.backUserPnrma);
@@ -51,8 +51,8 @@ public class ActivityBuatUsername extends AppCompatActivity {
                 String encryptedUsername = AES.encrypt(username);
                 String encryptedPassword = AES.encrypt(password);
                 // membuat path untuk firebase
-                mDatabase.child(String.valueOf(userId)).child("username").setValue(encryptedUsername);
-                mDatabase.child(String.valueOf(userId)).child("password").setValue(encryptedPassword);
+                mDatabase.child("Penerima").child(String.valueOf(userId)).child("username").setValue(encryptedUsername);
+                mDatabase.child("Penerima").child(String.valueOf(userId)).child("password").setValue(encryptedPassword);
                 // memberikan objek untuk class AES sehingga data diambil di AES
                 Toast.makeText(ActivityBuatUsername.this, "Registrasi Anda Berhasil!", Toast.LENGTH_LONG).show();
                 // membuat intent untuk ke halaman home
@@ -61,6 +61,5 @@ public class ActivityBuatUsername extends AppCompatActivity {
 
             }
         });
-
     }
 }

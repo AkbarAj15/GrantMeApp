@@ -57,7 +57,7 @@ public class BuatUsername2 extends AppCompatActivity {
                 // memberikan objek untuk class AES sehingga data diambil di AES
                 Toast.makeText(BuatUsername2.this, "Registrasi Anda Berhasil!", Toast.LENGTH_LONG).show();
                 // membuat intent untuk ke halaman home
-                Intent intent = new Intent(getApplicationContext(), penerima_home.class);
+                Intent intent = new Intent(getApplicationContext(), penyedia_home.class);
                 startActivity(intent);
             }
         });

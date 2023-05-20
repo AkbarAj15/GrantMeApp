@@ -1,11 +1,11 @@
 package com.example.grantme2;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 // Activity Sebelum pemilihan daftar atau masuk
 // landing page
 public class ActivityWelcome extends AppCompatActivity {
