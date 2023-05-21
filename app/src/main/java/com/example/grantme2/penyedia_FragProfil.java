@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -98,6 +99,14 @@ public class penyedia_FragProfil extends Fragment {
                 String username = intent.getStringExtra("username");
                 Intent i = new Intent(getContext(), penyedia_profil_bantuan.class);
                 i.putExtra("username", username);
+                startActivity(i);
+            }
+        });
+        Button btnKeluar = (Button) getView().findViewById(R.id.keluarPenyedia);
+        btnKeluar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getContext(), ActivityWelcome2.class);
                 startActivity(i);
             }
         });

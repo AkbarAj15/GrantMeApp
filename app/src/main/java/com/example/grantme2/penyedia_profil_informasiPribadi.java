@@ -41,6 +41,7 @@ public class penyedia_profil_informasiPribadi extends AppCompatActivity {
         etUsername = findViewById(R.id.usernamepenyediaprofil);
         etPassword = findViewById(R.id.passpenyediaprofil);
         etNotelp = findViewById(R.id.noTelpPenyedia);
+        txtUsername = findViewById(R.id.penyediaInfo);
         Intent intent = getIntent();
         String namaIns = intent.getStringExtra("namaIns");
         String emailIns = intent.getStringExtra("emailIns");
@@ -54,6 +55,7 @@ public class penyedia_profil_informasiPribadi extends AppCompatActivity {
         etUsername.setText(username);
         etPassword.setText(password);
         etNotelp.setText(noTelp1);
+        txtUsername.setText(username);
         ubah = findViewById(R.id.ubahProfil);
         ubah.setOnClickListener(new View.OnClickListener() {
             @Override
