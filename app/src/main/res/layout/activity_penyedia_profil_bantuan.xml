@@ -4,6 +4,220 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".penyedia_profil_bantuan">
 
+    <TextView
+        android:id="@+id/labelnale23"
+        android:layout_width="225dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="24dp"
+        android:fontFamily="@font/poppins"
+        android:text="Subjek/Judul"
+        android:textColor="#161C2B"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelnale25" />
+
+    <EditText
+        android:id="@+id/judulmasalah2"
+        android:layout_width="343dp"
+        android:layout_height="56dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/form_daftar"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:hint="Masukkan judul"
+        android:inputType="text"
+        android:padding="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="#A3A3AE"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelnale23" />
+
+    <TextView
+        android:id="@+id/labelnale25"
+        android:layout_width="343dp"
+        android:layout_height="78dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins"
+        android:text="Catatan :
+Jika masih menghadapi masalah setelah membaca petunjuk penggunaan, silahkan isi form dibawah ini"
+        android:textColor="#F39E1F"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelnale28" />
+
+    <TextView
+        android:id="@+id/labelnale26"
+        android:layout_width="55dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="52dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Profil"
+        android:textColor="#161C2B"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/namapenyediaprofil"
+        android:layout_width="209dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:hint="nama pengguna"
+        android:paddingStart="1dp"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/labelnale26" />
+
+    <TextView
+        android:id="@+id/labelnale28"
+        android:layout_width="198dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="left"
+        android:text="Petunjuk penggunaan"
+        android:textColor="#161C2B"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textDokumenSaya3" />
+
+    <Button
+        android:id="@+id/lanjutpenyedia2"
+        android:layout_width="359dp"
+        android:layout_height="47dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="22dp"
+        android:background="@drawable/button_daftar"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center"
+        android:text="Kirim Permintaan"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/kembaliBantuan2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.072"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.045"
+        app:srcCompat="@drawable/arrow_back" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="40dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textDokumenSaya3"
+        app:srcCompat="@drawable/icon_download" />
+
+    <TextView
+        android:id="@+id/statuspenyediaprofil"
+        android:layout_width="186dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="18dp"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:paddingStart="1dp"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        android:text="Penyedia"
+        android:textColor="#1E1EAE"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/namapenyediaprofil" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/def_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelnale26"
+        tools:src="@drawable/default_profile" />
+
+    <TextView
+        android:id="@+id/textDokumenSaya3"
+        android:layout_width="302dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Bantuan "
+        android:textColor="#161C2B"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/statuspenyediaprofil" />
+
+    <TextView
+        android:id="@+id/labelnale29"
+        android:layout_width="229dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins"
+        android:text="Deskrpsi masalah"
+        android:textColor="#161C2B"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/judulmasalah2" />
+
+    <EditText
+        android:id="@+id/deskripsimasalah2"
+        android:layout_width="343dp"
+        android:layout_height="146dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/form_daftar"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:gravity="left"
+        android:hint="Masukkan masalah yang kamu alami"
+        android:inputType="textMultiLine"
+        android:padding="15dp"
+        android:paddingTop="5dp"
+        android:textColor="@color/black"
+        android:textColorHint="#A3A3AE"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelnale29" />
 </androidx.constraintlayout.widget.ConstraintLayout>

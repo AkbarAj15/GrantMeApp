@@ -18,11 +18,11 @@
         tools:targetApi="31">
         <activity
             android:name=".penyedia_profil_bantuan"
-            android:exported="false"
+            android:exported="true"
             android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".penyedia_UbahBeasiswa"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".penerima_kata_sandi"
             android:exported="true" />
@@ -55,7 +55,8 @@
             android:exported="true" />
         <activity
             android:name=".penerima_profil_informasi_pribadi"
-            android:exported="true" />
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan"/>
         <activity
             android:name=".login"
             android:exported="true" />
