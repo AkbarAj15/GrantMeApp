@@ -39,7 +39,7 @@
         android:fontFamily="@font/poppins"
         android:gravity="left"
         android:hint="Masukkan masalah yang kamu alami"
-        android:inputType="text"
+        android:inputType="textMultiLine"
         android:padding="15dp"
         android:paddingTop="5dp"
         android:textColor="@color/black"

@@ -17,6 +17,10 @@
         android:theme="@style/Theme.Design.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".penyedia_profil_bantuan"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
             android:name=".penyedia_UbahBeasiswa"
             android:exported="false" />
         <activity
@@ -30,7 +34,9 @@
             android:exported="true" />
         <activity
             android:name=".penyedia_TambahBeasiswa"
-            android:exported="true" />
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
         <activity
             android:name=".ActivityProfile"
             android:exported="true" />
@@ -42,7 +48,8 @@
             android:exported="true" />
         <activity
             android:name=".penerima_profil_bantuan"
-            android:exported="true" />
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".penerima_profil_dokumenSaya"
             android:exported="true" />

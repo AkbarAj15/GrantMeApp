@@ -15,7 +15,7 @@ public class penerima_profil_bantuan extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bantuan);
+        setContentView(R.layout.activity_penerima_profil_bantuan);
         btnKembali = findViewById(R.id.kembaliBantuan);
         btnKembali.setOnClickListener(new View.OnClickListener() {
             @Override
