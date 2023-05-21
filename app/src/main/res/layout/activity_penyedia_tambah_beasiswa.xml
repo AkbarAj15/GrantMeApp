@@ -25,7 +25,7 @@
         android:id="@+id/texttambahbeas"
         android:layout_width="302dp"
         android:layout_height="33dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="70dp"
         android:fontFamily="@font/poppins_bold"
         android:text="Tambahkan Beasiswa"
         android:textColor="#161C2B"
