@@ -75,7 +75,7 @@ public class penerima_FragProfil extends Fragment {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getContext(), ActivityWelcome2.class);
+                Intent i = new Intent(getContext(), login.class);
                 startActivity(i);
             }
         });
@@ -106,7 +106,11 @@ public class penerima_FragProfil extends Fragment {
         txtDokumen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent = getActivity().getIntent();
+                String username1 = intent.getStringExtra("username");
+                String id = intent.getStringExtra("userId");
                 Intent i = new Intent(getContext(), penerima_profil_dokumenSaya.class);
+                i.putExtra("username", username1);
                 startActivity(i);
             }
         });
@@ -117,9 +121,11 @@ public class penerima_FragProfil extends Fragment {
                 Intent intent = getActivity().getIntent();
                 String username1 = intent.getStringExtra("username");
                 String password1 = intent.getStringExtra("password");
+                String id = intent.getStringExtra("userId");
                 Intent i = new Intent(requireContext(), penerima_kata_sandi.class);
                 i.putExtra("username", username1);
                 i.putExtra("password", password1);
+                i.putExtra("userId", id);
                 startActivity(i);
             }
         });

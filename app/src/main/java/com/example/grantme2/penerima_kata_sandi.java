@@ -28,7 +28,6 @@ public class penerima_kata_sandi extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_penerima_kata_sandi);
         mDatabase = FirebaseDatabase.getInstance().getReference("Pengguna");
-        int userId = 1;
         // kembali ke halaman sebelumnya
         btnKembali = findViewById(R.id.kembaliSandi);
         btnKembali.setOnClickListener(new View.OnClickListener() {
@@ -43,6 +42,7 @@ public class penerima_kata_sandi extends AppCompatActivity {
         Intent intent = getIntent();
         String username1 = intent.getStringExtra("username");
         String password1 = intent.getStringExtra("password");
+        String id = intent.getStringExtra("userId");
         namaPengguna.setText(username1);
         username.setText(username1);
         password.setText(password1);
@@ -56,8 +56,8 @@ public class penerima_kata_sandi extends AppCompatActivity {
                 String encryptedUsername = AES.encrypt(username2);
                 String encryptedPassword = AES.encrypt(password2);
                 // membuat path untuk firebase
-                mDatabase.child("Penerima").child(String.valueOf(userId)).child("username").setValue(encryptedUsername);
-                mDatabase.child("Penerima").child(String.valueOf(userId)).child("password").setValue(encryptedPassword);
+                mDatabase.child("Penerima").child(id).child("username").setValue(encryptedUsername);
+                mDatabase.child("Penerima").child(id).child("password").setValue(encryptedPassword);
                 Toast.makeText(penerima_kata_sandi.this, "Perubahan Anda Berhasil!", Toast.LENGTH_LONG).show();
                 finish();
             }

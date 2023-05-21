@@ -88,18 +88,16 @@ public class ActivityRegistrasiPenerima extends AppCompatActivity {
                 String noTelp = edtNoTelp.getText().toString();
                 String ttl = texttl.getText().toString();
                 String jenKel = textjenkel.getText().toString();
+                String id = mDatabase.push().getKey();
                 // membuat nilai nya ke halaman selanjutnya
                 Penerima penerima = new Penerima(namaLengkap, email, noTelp,
                         ttl, jenKel);
-                String userIdString1 = String.valueOf(userId);
-                mDatabase.child("Penerima").child(userIdString1).setValue(penerima);
+                mDatabase.child("Penerima").child(id).setValue(penerima);
                 // Save the Penerima object to the Firebase database
                 //membuat intent untuk mengirimkan nilai ke halaman buat username
                 Intent i = new Intent(ActivityRegistrasiPenerima.this, ActivityBuatUsername.class);
-                i.putExtra("userId", userId);
+                i.putExtra("userId", id);
                 startActivity(i);
-                userId++;
-
             }
         });
         // menuju ke halaman login jika sudah memiliki akun
