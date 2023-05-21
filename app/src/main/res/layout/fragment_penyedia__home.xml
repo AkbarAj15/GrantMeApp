@@ -75,7 +75,7 @@
         android:textSize="14sp" />
 
     <TextView
-        android:id="@+id/namauser"
+        android:id="@+id/userPenyedia"
         android:layout_width="wrap_content"
         android:layout_height="32dp"
         android:layout_alignTop="@+id/rectangle_1"

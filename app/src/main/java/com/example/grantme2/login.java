@@ -25,7 +25,6 @@ public class login extends AppCompatActivity {
     ImageButton btnKembali;
     // deklarasi firebase
     private DatabaseReference mDatabase;
-    private int userId =1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,13 +58,10 @@ public class login extends AppCompatActivity {
                         cekPenyedia(new LoginCallback() {
                             @Override
                             public void onLoginSuccess() {
-                                Intent i = new Intent(login.this, penyedia_home.class);
-                                startActivity(i);
                                 Toast.makeText(login.this, "Berhasil Masuk Sebagai Penyedia!", Toast.LENGTH_LONG).show();
                             }
                             @Override
                             public void onLoginFailure() {
-                                userId++;
                                 Toast.makeText(login.this, "Data tidak ditemukan", Toast.LENGTH_LONG).show();
                             }
                         });
@@ -137,8 +133,8 @@ public class login extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot userSnapshot : snapshot.getChildren()){
                     String id = userSnapshot.getKey();
-                    String encryptedUsernamePenyedia = snapshot.child("Penyedia").child(id).child("username").getValue(String.class);
-                    String encryptedPasswordPenyedia = snapshot.child("Penyedia").child(id).child("password").getValue(String.class);
+                    String encryptedUsernamePenyedia = snapshot.child(id).child("username").getValue(String.class);
+                    String encryptedPasswordPenyedia = snapshot.child(id).child("password").getValue(String.class);
 
                     if (encryptedUsernamePenyedia != null && encryptedPasswordPenyedia != null) {
                         // Data ditemukan di path "Penyedia"
@@ -147,6 +143,16 @@ public class login extends AppCompatActivity {
 
                         if (decryptedUsernamePenyedia != null && decryptedPasswordPenyedia != null) {
                             if (username.equals(decryptedUsernamePenyedia) && password.equals(decryptedPasswordPenyedia)) {
+                                String namaInstansi = snapshot.child("Penyedia").child(id).child("namaInstansi").getValue(String.class);
+                                String emailIns = snapshot.child("Penyedia").child(id).child("emailInstansi").getValue(String.class);
+                                String noTelpIns = snapshot.child("Penyedia").child(id).child("noTelpInstansi").getValue(String.class);
+                                Intent i = new Intent(login.this, penyedia_home.class);
+                                i.putExtra("namaIns", namaInstansi);
+                                i.putExtra("emailIns", emailIns);
+                                i.putExtra("noTelpIns", noTelpIns);
+                                i.putExtra("username", decryptedUsernamePenyedia);
+                                i.putExtra("password", decryptedPasswordPenyedia);
+                                startActivity(i);
                                 callback.onLoginSuccess();
                             } else {
                                 callback.onLoginFailure();

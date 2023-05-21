@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -19,6 +20,7 @@ public class ActivityRegistrasiPenyedia extends AppCompatActivity {
     ImageButton btnKembali;
     Button btnLanjut;
     EditText edtNamaInstansi, edtEmail, edtNotelp;
+    TextView login;
     // mendeklarasikan objek dari database
     private DatabaseReference mDatabase;
     @Override
@@ -53,12 +55,18 @@ public class ActivityRegistrasiPenyedia extends AppCompatActivity {
                 // memberikan nilai melalui class penyedia
                 Penyedia penyedia = new Penyedia(namaIns, emailIns, noTelpIns);
                 mDatabase.child("Penyedia").child(id).setValue(penyedia);
-                Intent intent = new Intent(ActivityRegistrasiPenyedia.this, BuatUsername2.class);
-                startActivity(intent);
                 //membuat intent untuk mengirimkan nilai ke halaman buat username
                 Intent i = new Intent(ActivityRegistrasiPenyedia.this, BuatUsername2.class);
                 i.putExtra("userId", id);
-                startActivity(intent);
+                startActivity(i);
+            }
+        });
+        login = findViewById(R.id.masukPenyedia);
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(ActivityRegistrasiPenyedia.this, login.class);
+                startActivity(i);
             }
         });
     }

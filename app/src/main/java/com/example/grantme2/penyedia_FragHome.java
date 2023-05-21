@@ -1,10 +1,14 @@
 package com.example.grantme2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 /**
@@ -59,5 +63,12 @@ public class penyedia_FragHome extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_penyedia__home, container, false);
+    }
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        TextView txtUsername = (TextView) getView().findViewById(R.id.userPenyedia);
+        Intent intent = getActivity().getIntent();
+        String username = intent.getStringExtra("username");
+        txtUsername.setText(username);
     }
 }

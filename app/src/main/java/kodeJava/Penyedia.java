@@ -1,36 +1,37 @@
 package kodeJava;
 
 public class Penyedia {
-    String namaIns, emailIns, noTelpIns;
-
-    public String getNamaIns() {
-        return namaIns;
-    }
-
-    public void setNamaIns(String namaIns) {
-        this.namaIns = namaIns;
-    }
-
-    public String getEmailIns() {
-        return emailIns;
-    }
-
-    public void setEmailIns(String emailIns) {
-        this.emailIns = emailIns;
-    }
-
-    public String getNoTelpIns() {
-        return noTelpIns;
-    }
-
-    public void setNoTelpIns(String noTelpIns) {
-        this.noTelpIns = noTelpIns;
-    }
-
+    String namaInstansi, emailInstansi, noTelpInstansi;
     public Penyedia(){}
-    public Penyedia(String namaIns, String emailIns, String noTelpIns) {
-        this.namaIns = namaIns;
-        this.emailIns = emailIns;
-        this.noTelpIns = noTelpIns;
+
+    public Penyedia(String namaInstansi, String emailInstansi, String noTelpInstansi) {
+        this.namaInstansi = namaInstansi;
+        this.emailInstansi = emailInstansi;
+        this.noTelpInstansi = noTelpInstansi;
+    }
+
+
+    public String getNamaInstansi() {
+        return namaInstansi;
+    }
+
+    public void setNamaInstansi(String namaInstansi) {
+        this.namaInstansi = namaInstansi;
+    }
+
+    public String getEmailInstansi() {
+        return emailInstansi;
+    }
+
+    public void setEmailInstansi(String emailInstansi) {
+        this.emailInstansi = emailInstansi;
+    }
+
+    public String getNoTelpInstansi() {
+        return noTelpInstansi;
+    }
+
+    public void setNoTelpInstansi(String noTelpInstansi) {
+        this.noTelpInstansi = noTelpInstansi;
     }
 }

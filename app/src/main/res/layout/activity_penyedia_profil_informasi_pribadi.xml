@@ -151,18 +151,17 @@
         android:layout_marginStart="16dp"
         android:ems="10"
         android:fontFamily="@font/poppins"
-        android:hint="statuspengguna"
         android:paddingStart="1dp"
         android:paddingTop="1dp"
-
+        android:text="Penyedia"
+        android:textColor="#1E1EAE"
         android:paddingBottom="1dp"
-        android:textColorHint="#1E1EAE"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/imageView5"
         app:layout_constraintTop_toBottomOf="@+id/namapengguna" />
 
     <ImageButton
-        android:id="@+id/backregispenerima2"
+        android:id="@+id/kembaliInformasi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/white"
@@ -183,7 +182,7 @@
         android:ems="10"
         android:fontFamily="@font/poppins"
         android:hint="nama pengguna"
-
+        android:textColor="@color/black"
         android:paddingStart="1dp"
         android:paddingTop="1dp"
         android:paddingBottom="1dp"

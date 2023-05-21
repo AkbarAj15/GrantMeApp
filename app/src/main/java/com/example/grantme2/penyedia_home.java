@@ -1,5 +1,6 @@
 package com.example.grantme2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -31,6 +32,14 @@ public class penyedia_home extends AppCompatActivity {
         final TextView textbeasiswa = findViewById(R.id.text_beasiswa);
         final TextView textstatus = findViewById(R.id.text_status);
         final TextView textprofil = findViewById(R.id.text_profile);
+        // mengambil nilai dari login dan regis
+        Intent intent = getIntent();
+        String namaInstansi = intent.getStringExtra("namaIns");
+        String emailIns = intent.getStringExtra("emailIns");
+        String noTelpIns = intent.getStringExtra("noTelpIns");
+        String username = intent.getStringExtra("username");
+        String password = intent.getStringExtra("password");
+        String id = intent.getStringExtra("userId");
 
 
         getSupportFragmentManager()
