@@ -132,7 +132,7 @@ Jika masih menghadapi masalah setelah membaca petunjuk penggunaan, silahkan isi 
         android:layout_marginStart="20dp"
         android:layout_marginTop="21dp"
         android:fontFamily="@font/poppins_bold"
-        android:text="Dokumen Saya"
+        android:text="Bantuan "
         android:textColor="#161C2B"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -151,7 +151,7 @@ Jika masih menghadapi masalah setelah membaca petunjuk penggunaan, silahkan isi 
         tools:src="@drawable/default_profile" />
 
     <TextView
-        android:id="@+id/namapengguna3"
+        android:id="@+id/namaPnrama4"
         android:layout_width="209dp"
         android:layout_height="31dp"
         android:layout_marginStart="18dp"
@@ -162,7 +162,8 @@ Jika masih menghadapi masalah setelah membaca petunjuk penggunaan, silahkan isi 
         android:paddingStart="1dp"
         android:paddingTop="1dp"
         android:paddingBottom="1dp"
-        android:textColorHint="#000000"
+        android:textColorHint="@color/black"
+        android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/imageView4"
         app:layout_constraintTop_toBottomOf="@+id/labelnale18" />
@@ -181,7 +182,7 @@ Jika masih menghadapi masalah setelah membaca petunjuk penggunaan, silahkan isi 
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/backregispenerima5"
+        android:id="@+id/kembaliBantuan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/white"
@@ -200,14 +201,14 @@ Jika masih menghadapi masalah setelah membaca petunjuk penggunaan, silahkan isi 
         android:layout_marginStart="18dp"
         android:ems="10"
         android:fontFamily="@font/poppins"
-        android:hint="statuspengguna"
         android:paddingStart="1dp"
         android:paddingTop="1dp"
         android:paddingBottom="1dp"
-        android:textColorHint="#1E1EAE"
+        android:text="Penerima"
+        android:textColor="#1E1EAE"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/imageView4"
-        app:layout_constraintTop_toBottomOf="@+id/namapengguna3" />
+        app:layout_constraintTop_toBottomOf="@+id/namaPnrama4" />
 
     <ImageButton
         android:id="@+id/imageButton"

@@ -25,8 +25,7 @@ public class penerima_profil_informasi_pribadi extends AppCompatActivity {
         btnKembali.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), penerima_FragProfil.class);
-                startActivity(i);
+                finish();
             }
         });
         // deklarasi untuk menghubungkan data penerima

@@ -8,7 +8,7 @@
     tools:context=".penerima_profil_informasi_pribadi">
 
     <Button
-        android:id="@+id/simpanPrfl"
+        android:id="@+id/ubahUser"
         android:layout_width="359dp"
         android:layout_height="47dp"
         android:layout_alignParentStart="true"
@@ -39,7 +39,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/usrPrfl"
+        android:id="@+id/usrnameSandi"
         android:layout_width="340dp"
         android:layout_height="46dp"
         android:layout_alignParentStart="true"
@@ -60,7 +60,7 @@
         app:layout_constraintTop_toBottomOf="@+id/labelnale15" />
 
     <EditText
-        android:id="@+id/ttlPrfl"
+        android:id="@+id/passwordSandi"
         android:layout_width="340dp"
         android:layout_height="46dp"
         android:layout_alignParentStart="true"
@@ -104,7 +104,7 @@
         android:hint="nama pengguna"
         android:paddingStart="1dp"
         android:paddingTop="1dp"
-
+        android:textColor="@color/black"
         android:paddingBottom="1dp"
         android:textColorHint="#000000"
         android:textSize="16sp"
@@ -122,7 +122,7 @@
         android:textColor="#161C2B"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/usrPrfl" />
+        app:layout_constraintTop_toBottomOf="@+id/usrnameSandi" />
 
     <TextView
         android:id="@+id/statusPnrma3"
@@ -170,7 +170,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textDaftar7" />
 
     <ImageButton
-        android:id="@+id/backPrflPnrma"
+        android:id="@+id/kembaliSandi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/white"

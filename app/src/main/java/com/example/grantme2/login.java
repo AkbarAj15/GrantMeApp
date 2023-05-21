@@ -51,8 +51,6 @@ public class login extends AppCompatActivity {
                 cekPenerima(new LoginCallback() {
                     @Override
                     public void onLoginSuccess() {
-                        Intent i = new Intent(login.this, penerima_home.class);
-                        startActivity(i);
                         Toast.makeText(login.this, "Berhasil Masuk Sebagai Penerima!", Toast.LENGTH_LONG).show();
                     }
 
@@ -67,7 +65,8 @@ public class login extends AppCompatActivity {
                             }
                             @Override
                             public void onLoginFailure() {
-                                Toast.makeText(login.this, "Data penyedia tidak ditemukan", Toast.LENGTH_LONG).show();
+                                userId++;
+                                Toast.makeText(login.this, "Data tidak ditemukan", Toast.LENGTH_LONG).show();
                             }
                         });
                     }
@@ -99,19 +98,15 @@ public class login extends AppCompatActivity {
                             String jenkel = snapshot.child("Penerima").child(userIdS).child("jenKel").getValue(String.class);
                             String noTelp = snapshot.child("Penerima").child(userIdS).child("noTelepon").getValue(String.class);
                             // mengirim data ke halaman informasi pribadi
-                            Intent i = new Intent(login.this, penerima_profil_informasi_pribadi.class);
+                            Intent i = new Intent(login.this, penerima_home.class);
                             i.putExtra("namaLengkap", namaLkpFb);
                             i.putExtra("email", email);
                             i.putExtra("ttl", ttl);
                             i.putExtra("jenKel", jenkel);
                             i.putExtra("noTelp", noTelp);
                             i.putExtra("username", decryptedUsername);
+                            i.putExtra("password", decryptedPassword);
                             startActivity(i);
-                            // mengirim username dan password ke halaman kata sandi
-                            Intent uP = new Intent(login.this, penerima_kata_sandi.class);
-                            uP.putExtra("username", decryptedUsername);
-                            uP.putExtra("password", decryptedPassword);
-                            startActivity(uP);
                             callback.onLoginSuccess();
                         } else {
                             callback.onLoginFailure();

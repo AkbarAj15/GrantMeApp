@@ -67,6 +67,10 @@ public class penerima_FragProfil extends Fragment {
     }
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        TextView txtNama = (TextView) getView().findViewById(R.id.namapenerima);
+        Intent intent =getActivity().getIntent();
+        String username = intent.getStringExtra("username");
+        txtNama.setText(username);
         Button btn = (Button) getView().findViewById(R.id.keluarprofil);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,7 +83,22 @@ public class penerima_FragProfil extends Fragment {
         txtInformasi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getContext(), penerima_profil_informasi_pribadi.class);
+                // mengambil data login
+                Intent intent = getActivity().getIntent();
+                String namaLengkap = intent.getStringExtra("namaLengkap");
+                String email = intent.getStringExtra("email");
+                String ttl = intent.getStringExtra("ttl");
+                String jenKel = intent.getStringExtra("jenKel");
+                String noTelp = intent.getStringExtra("noTelp");
+                String username = intent.getStringExtra("username");
+                // mengirim ke halaman informasi pribadi
+                Intent i = new Intent(requireContext(), penerima_profil_informasi_pribadi.class);
+                i.putExtra("namaLengkap", namaLengkap);
+                i.putExtra("email", email);
+                i.putExtra("ttl", ttl);
+                i.putExtra("jenKel", jenKel);
+                i.putExtra("noTelp", noTelp);
+                i.putExtra("username", username);
                 startActivity(i);
             }
         });
@@ -91,11 +110,27 @@ public class penerima_FragProfil extends Fragment {
                 startActivity(i);
             }
         });
+        TextView txtKataSandi = (TextView) getView().findViewById(R.id.kataSandi);
+        txtKataSandi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = getActivity().getIntent();
+                String username1 = intent.getStringExtra("username");
+                String password1 = intent.getStringExtra("password");
+                Intent i = new Intent(requireContext(), penerima_kata_sandi.class);
+                i.putExtra("username", username1);
+                i.putExtra("password", password1);
+                startActivity(i);
+            }
+        });
         TextView txtBantuan = (TextView) getView().findViewById(R.id.bantuan);
         txtBantuan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent = getActivity().getIntent();
+                String username1 = intent.getStringExtra("username");
                 Intent i = new Intent(getContext(), penerima_profil_bantuan.class);
+                i.putExtra("username", username1);
                 startActivity(i);
             }
         });

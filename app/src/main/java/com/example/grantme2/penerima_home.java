@@ -1,5 +1,6 @@
 package com.example.grantme2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
@@ -31,6 +32,18 @@ public class penerima_home extends AppCompatActivity {
         final TextView textbeasiswa = findViewById(R.id.text_beasiswa);
         final TextView textstatus = findViewById(R.id.text_status);
         final TextView textprofil = findViewById(R.id.text_profile);
+
+        // mengambil data login
+        Intent intent = getIntent();
+        String namaLengkap = intent.getStringExtra("namaLengkap");
+        String email = intent.getStringExtra("email");
+        String ttl = intent.getStringExtra("ttl");
+        String jenKel = intent.getStringExtra("jenKel");
+        String noTelp = intent.getStringExtra("noTelp");
+        String username = intent.getStringExtra("username");
+        String password = intent.getStringExtra("password");
+
+
 
 
         getSupportFragmentManager()
@@ -142,6 +155,7 @@ public class penerima_home extends AppCompatActivity {
         penerima_profil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // mengirim ke halaman informasi pribadi
                 if (selectedTab != 4){
                     getSupportFragmentManager()
                             .beginTransaction().setReorderingAllowed(true)
@@ -166,7 +180,6 @@ public class penerima_home extends AppCompatActivity {
                     ScaleAnimation scaleAnimation = new ScaleAnimation(0.8f,1.0f,1f,1f, Animation.RELATIVE_TO_SELF,0.0f);
                     scaleAnimation.setDuration(200);
                     scaleAnimation.setFillAfter(true);
-
                     penerima_profil.startAnimation(scaleAnimation);
                     selectedTab = 4;
                 }
