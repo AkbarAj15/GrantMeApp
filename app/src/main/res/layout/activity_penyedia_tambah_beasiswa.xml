@@ -79,7 +79,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:fontFamily="@font/poppins"
-                android:text="Nama Lengkap"
+                android:text="Nama Beasiswa"
                 android:textColor="#161C2B"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -356,7 +356,5 @@
                 app:layout_constraintTop_toBottomOf="@+id/labelnotel7" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
     </ScrollView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
