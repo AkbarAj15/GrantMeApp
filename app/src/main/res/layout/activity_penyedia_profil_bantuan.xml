@@ -70,7 +70,7 @@ Jika masih menghadapi masalah setelah membaca petunjuk penggunaan, silahkan isi 
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/namapenyediaprofil"
+        android:id="@+id/usrPenyediaBantuan"
         android:layout_width="209dp"
         android:layout_height="31dp"
         android:layout_marginStart="18dp"
@@ -158,7 +158,7 @@ Jika masih menghadapi masalah setelah membaca petunjuk penggunaan, silahkan isi 
         android:textColor="#1E1EAE"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/namapenyediaprofil" />
+        app:layout_constraintTop_toBottomOf="@+id/usrPenyediaBantuan" />
 
     <ImageView
         android:id="@+id/imageView3"

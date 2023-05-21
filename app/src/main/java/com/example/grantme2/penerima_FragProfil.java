@@ -91,6 +91,7 @@ public class penerima_FragProfil extends Fragment {
                 String jenKel = intent.getStringExtra("jenKel");
                 String noTelp = intent.getStringExtra("noTelp");
                 String username = intent.getStringExtra("username");
+                String id = intent.getStringExtra("userId");
                 // mengirim ke halaman informasi pribadi
                 Intent i = new Intent(requireContext(), penerima_profil_informasi_pribadi.class);
                 i.putExtra("namaLengkap", namaLengkap);
@@ -99,6 +100,7 @@ public class penerima_FragProfil extends Fragment {
                 i.putExtra("jenKel", jenKel);
                 i.putExtra("noTelp", noTelp);
                 i.putExtra("username", username);
+                i.putExtra("userId", id);
                 startActivity(i);
             }
         });

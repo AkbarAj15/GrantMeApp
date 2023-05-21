@@ -8,7 +8,7 @@
     tools:context=".penerima_profil_informasi_pribadi">
 
     <Button
-        android:id="@+id/simpanPrfl"
+        android:id="@+id/ubahPenerima"
         android:layout_width="359dp"
         android:layout_height="47dp"
         android:layout_alignParentStart="true"

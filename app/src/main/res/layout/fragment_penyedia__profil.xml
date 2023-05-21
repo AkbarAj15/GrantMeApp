@@ -11,7 +11,7 @@
 
 
     <Button
-        android:id="@+id/keluarprofil3"
+        android:id="@+id/keluarPenyedia"
         android:layout_width="359dp"
         android:layout_height="47dp"
         android:layout_alignParentStart="true"
@@ -40,7 +40,7 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/informasiPribadi2" />
+        app:layout_constraintTop_toBottomOf="@+id/infoPenyedia" />
 
     <TextView
         android:id="@+id/textDaftar9"
@@ -58,7 +58,7 @@
         app:layout_constraintTop_toBottomOf="@+id/statuspenyedia" />
 
     <TextView
-        android:id="@+id/bantuan2"
+        android:id="@+id/bantuanPenyedia"
         android:layout_width="344dp"
         android:layout_height="31dp"
         android:layout_marginTop="20dp"
@@ -88,7 +88,7 @@
         tools:src="@drawable/default_profile" />
 
     <TextView
-        android:id="@+id/informasiPribadi2"
+        android:id="@+id/infoPenyedia"
         android:layout_width="344dp"
         android:layout_height="31dp"
         android:layout_marginTop="20dp"
@@ -113,9 +113,10 @@
         android:fontFamily="@font/poppins"
         android:hint="statuspengguna"
         android:paddingStart="1dp"
+        android:text="Penyedia"
         android:paddingTop="1dp"
         android:paddingBottom="1dp"
-        android:textColorHint="#1E1EAE"
+        android:textColor="#1E1EAE"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/fotopenyedia"
         app:layout_constraintTop_toBottomOf="@+id/namapenyedia" />
@@ -129,6 +130,7 @@
         android:ems="10"
         android:fontFamily="@font/poppins"
         android:hint="nama pengguna"
+        android:textColor="@color/black"
         android:paddingStart="1dp"
         android:paddingTop="1dp"
         android:paddingBottom="1dp"

@@ -62,7 +62,7 @@ public class login extends AppCompatActivity {
                             }
                             @Override
                             public void onLoginFailure() {
-                                Toast.makeText(login.this, "Data tidak ditemukan", Toast.LENGTH_LONG).show();
+                                Toast.makeText(login.this, "Data Penyedia tidak ditemukan", Toast.LENGTH_LONG).show();
                             }
                         });
                     }
@@ -103,16 +103,17 @@ public class login extends AppCompatActivity {
                                 i.putExtra("noTelp", noTelp);
                                 i.putExtra("username", decryptedUsername);
                                 i.putExtra("password", decryptedPassword);
+                                i.putExtra("userId", id);
                                 startActivity(i);
                                 callback.onLoginSuccess();
                             } else {
                                 callback.onLoginFailure();
                             }
                         } else {
-                            callback.onLoginFailure();
+                            Toast.makeText(login.this, "Gagal mendekripsi username atau password", Toast.LENGTH_LONG).show();
                         }
                     }else{
-                        callback.onLoginFailure();
+                        Toast.makeText(login.this, "Data penerima tidak ditemukan", Toast.LENGTH_LONG).show();
                     }
                 }
 
@@ -127,7 +128,6 @@ public class login extends AppCompatActivity {
     public void cekPenyedia(LoginCallback callback){
         String username = edtUser.getText().toString().trim();
         String password = edtPass.getText().toString().trim();
-
         mDatabase.child("Penyedia").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -143,33 +143,29 @@ public class login extends AppCompatActivity {
 
                         if (decryptedUsernamePenyedia != null && decryptedPasswordPenyedia != null) {
                             if (username.equals(decryptedUsernamePenyedia) && password.equals(decryptedPasswordPenyedia)) {
-                                String namaInstansi = snapshot.child("Penyedia").child(id).child("namaInstansi").getValue(String.class);
-                                String emailIns = snapshot.child("Penyedia").child(id).child("emailInstansi").getValue(String.class);
-                                String noTelpIns = snapshot.child("Penyedia").child(id).child("noTelpInstansi").getValue(String.class);
+                                String namaInstansi = snapshot.child(id).child("namaInstansi").getValue(String.class);
+                                String emailIns = snapshot.child(id).child("emailInstansi").getValue(String.class);
+                                String noTelpIns = snapshot.child(id).child("noTelpInstansi").getValue(String.class);
                                 Intent i = new Intent(login.this, penyedia_home.class);
                                 i.putExtra("namaIns", namaInstansi);
                                 i.putExtra("emailIns", emailIns);
                                 i.putExtra("noTelpIns", noTelpIns);
                                 i.putExtra("username", decryptedUsernamePenyedia);
                                 i.putExtra("password", decryptedPasswordPenyedia);
+                                i.putExtra("userId", id);
                                 startActivity(i);
                                 callback.onLoginSuccess();
                             } else {
-                                callback.onLoginFailure();
-                                Toast.makeText(login.this, "Login Anda Gagal!", Toast.LENGTH_LONG).show();
                             }
                         } else {
-                            callback.onLoginFailure();
                             Toast.makeText(login.this, "Gagal mendekripsi username atau password", Toast.LENGTH_LONG).show();
                         }
                     } else {
                         callback.onLoginFailure();
-                        Toast.makeText(login.this, "Data penyedia tidak ditemukan", Toast.LENGTH_LONG).show();
                     }
                 }
 
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 

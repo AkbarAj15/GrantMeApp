@@ -1,10 +1,14 @@
 package com.example.grantme2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 /**
@@ -59,5 +63,43 @@ public class penyedia_FragProfil extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_penyedia__profil, container, false);
+    }
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        TextView txtUsername = (TextView) getView().findViewById(R.id.namapenyedia);
+        Intent intent = getActivity().getIntent();
+        String username = intent.getStringExtra("username");
+        txtUsername.setText(username);
+        TextView txtInformasi = (TextView) getView().findViewById(R.id.infoPenyedia);
+        txtInformasi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = getActivity().getIntent();
+                String namaIns = intent.getStringExtra("namaIns");
+                String emailIns = intent.getStringExtra("emailIns");
+                String noTelpIns = intent.getStringExtra("noTelpIns");
+                String username = intent.getStringExtra("username");
+                String password = intent.getStringExtra("password");
+                String id = intent.getStringExtra("userId");
+                Intent i = new Intent(getContext(), penyedia_profil_informasiPribadi.class);
+                i.putExtra("namaIns", namaIns);
+                i.putExtra("emailIns", emailIns);
+                i.putExtra("noTelpIns", noTelpIns);
+                i.putExtra("username", username);
+                i.putExtra("password", password);
+                i.putExtra("userId", id);
+                startActivity(i);
+            }
+        });
+        TextView txtBantuan = (TextView) getView().findViewById(R.id.bantuanPenyedia);
+        txtBantuan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = getActivity().getIntent();
+                String username = intent.getStringExtra("username");
+                Intent i = new Intent(getContext(), penyedia_profil_bantuan.class);
+                i.putExtra("username", username);
+                startActivity(i);
+            }
+        });
     }
 }

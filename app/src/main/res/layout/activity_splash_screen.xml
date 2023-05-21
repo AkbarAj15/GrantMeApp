@@ -25,7 +25,7 @@
         android:layout_alignParentTop="true"
         android:gravity="center_horizontal|center_vertical"
         android:lineSpacingExtra="-5sp"
-        android:text="Depeloved By GM'23"
+        android:text="Developed By GM'23"
         android:textSize="14sp"
         android:fontFamily="@font/poppins"
         android:textColor="@color/white"
