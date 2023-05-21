@@ -42,6 +42,7 @@ public class penerima_home extends AppCompatActivity {
         String noTelp = intent.getStringExtra("noTelp");
         String username = intent.getStringExtra("username");
         String password = intent.getStringExtra("password");
+        String id = intent.getStringExtra("userId");
 
 
 

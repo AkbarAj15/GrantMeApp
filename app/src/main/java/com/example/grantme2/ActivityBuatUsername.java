@@ -8,10 +8,14 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import kodeJava.AES;
 
@@ -47,17 +51,45 @@ public class ActivityBuatUsername extends AppCompatActivity {
             public void onClick(View view) {
                 String username = edtUsername.getText().toString();
                 String password = edtPassword.getText().toString();
+                Intent intent = getIntent();
+                String id = intent.getStringExtra("userId");
                 // mengenkripsi username dan password menggunakan AES algoritma
                 String encryptedUsername = AES.encrypt(username);
                 String encryptedPassword = AES.encrypt(password);
                 // membuat path untuk firebase
-                mDatabase.child("Penerima").child(String.valueOf(userId)).child("username").setValue(encryptedUsername);
-                mDatabase.child("Penerima").child(String.valueOf(userId)).child("password").setValue(encryptedPassword);
+                mDatabase.child("Penerima").child(id).child("username").setValue(encryptedUsername);
+                mDatabase.child("Penerima").child(id).child("password").setValue(encryptedPassword);
                 // memberikan objek untuk class AES sehingga data diambil di AES
                 Toast.makeText(ActivityBuatUsername.this, "Registrasi Anda Berhasil!", Toast.LENGTH_LONG).show();
                 // membuat intent untuk ke halaman home
-                Intent intent = new Intent(getApplicationContext(), penerima_home.class);
-                startActivity(intent);
+                mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        String namaLkpFb = snapshot.child("Penerima").child(id).child("namaLengkap").getValue(String.class);
+                        String email = snapshot.child("Penerima").child(id).child("email").getValue(String.class);
+                        String ttl = snapshot.child("Penerima").child(id).child("ttl").getValue(String.class);
+                        String jenkel = snapshot.child("Penerima").child(id).child("jenKel").getValue(String.class);
+                        String noTelp = snapshot.child("Penerima").child(id).child("noTelepon").getValue(String.class);
+                        Intent i = new Intent(getApplicationContext(), penerima_home.class);
+                        String decryptedUsername = AES.decrypt(encryptedUsername);
+                        String decryptedPassword = AES.decrypt(encryptedPassword);
+                        i.putExtra("namaLengkap", namaLkpFb);
+                        i.putExtra("email", email);
+                        i.putExtra("ttl", ttl);
+                        i.putExtra("jenKel", jenkel);
+                        i.putExtra("noTelp", noTelp);
+                        i.putExtra("username", decryptedUsername);
+                        i.putExtra("password", decryptedPassword);
+                        i.putExtra("userId", id);
+                        startActivity(i);
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+
 
             }
         });

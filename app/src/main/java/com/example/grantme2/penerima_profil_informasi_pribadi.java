@@ -3,6 +3,7 @@ package com.example.grantme2;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -15,6 +16,7 @@ public class penerima_profil_informasi_pribadi extends AppCompatActivity {
     ImageView fotoProfil;
     TextView namaProfil, statusProfil;
     EditText namaLengkap, email, ttl,jenkel,noTelp;
+    Button ubah;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +40,13 @@ public class penerima_profil_informasi_pribadi extends AppCompatActivity {
         jenkel = findViewById(R.id.jenkelPrfl);
         noTelp = findViewById(R.id.noTelpPrfl);
         tampilData();
+        ubah = findViewById(R.id.simpanPrfl);
+        ubah.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
     public void tampilData(){
         Intent intent = getIntent();

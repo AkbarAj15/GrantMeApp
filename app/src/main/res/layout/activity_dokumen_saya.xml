@@ -23,7 +23,7 @@
         app:layout_constraintTop_toBottomOf="@+id/statuspengguna3" />
 
     <TextView
-        android:id="@+id/namapengguna4"
+        android:id="@+id/namaPnrama2"
         android:layout_width="209dp"
         android:layout_height="31dp"
         android:layout_marginStart="16dp"
@@ -31,6 +31,7 @@
         android:ems="10"
         android:fontFamily="@font/poppins"
         android:hint="nama pengguna"
+        android:textColor="@color/black"
         android:paddingStart="1dp"
         android:paddingTop="1dp"
         android:paddingBottom="1dp"
@@ -51,7 +52,7 @@
         tools:src="@drawable/default_profile" />
 
     <ImageButton
-        android:id="@+id/backregispenerima4"
+        android:id="@+id/kembaliDokumen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/white"
@@ -70,15 +71,14 @@
         android:layout_marginStart="16dp"
         android:ems="10"
         android:fontFamily="@font/poppins"
-        android:hint="statuspengguna"
-
+        android:text="Penerima"
         android:paddingStart="1dp"
         android:paddingTop="1dp"
+        android:textColor="#1E1EAE"
         android:paddingBottom="1dp"
-        android:textColorHint="#1E1EAE"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/fotoprofil"
-        app:layout_constraintTop_toBottomOf="@+id/namapengguna4" />
+        app:layout_constraintTop_toBottomOf="@+id/namaPnrama2" />
 
     <TextView
         android:id="@+id/labelnale11"
@@ -100,8 +100,10 @@
         android:layout_height="534dp"
         app:layout_constraintBottom_toBottomOf="@id/bawahbutton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textDokumenSaya">
+        app:layout_constraintTop_toBottomOf="@id/textDokumenSaya"
+        app:layout_constraintVertical_bias="0.043">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"

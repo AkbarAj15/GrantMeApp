@@ -1,10 +1,12 @@
 package com.example.grantme2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -79,6 +81,10 @@ public class penerima_FragHome extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        TextView txtNama = (TextView) getView().findViewById(R.id.namauser);
+        Intent intent =getActivity().getIntent();
+        String username = intent.getStringExtra("username");
+        txtNama.setText(username);
         gridView = view.findViewById(R.id.grid_home);
         gridView_atas = view.findViewById(R.id.grid_image_horizontal);
         dataList = new ArrayList<>();
