@@ -8,6 +8,43 @@
     android:backgroundTint="@color/white"
     tools:context=".penyedia_profil_informasiPribadi">
 
+    <EditText
+        android:id="@+id/ttlpenerima3"
+        android:layout_width="340dp"
+        android:layout_height="46dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/form_daftar"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:hint="No. Telepon
+"
+        android:inputType="date"
+        android:padding="5dp"
+        android:paddingStart="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="#A3A3AE"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labeljenkel4" />
+
+    <TextView
+        android:id="@+id/labeljenkel4"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="11dp"
+        android:fontFamily="@font/poppins"
+        android:text="No. Telepon"
+        android:textColor="#161C2B"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailpenyediaprofil" />
+
     <Button
         android:id="@+id/keluarprofil4"
         android:layout_width="359dp"
@@ -27,7 +64,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/notelepon2"
+        android:id="@+id/passpenyediaprofil"
         android:layout_width="340dp"
         android:layout_height="46dp"
         android:layout_alignParentStart="true"
@@ -39,7 +76,7 @@
         android:ems="10"
         android:fontFamily="@font/poppins"
         android:hint="Password"
-        android:inputType="number"
+        android:inputType="textPassword"
         android:padding="5dp"
         android:paddingStart="15dp"
         android:textColor="@color/black"
@@ -50,14 +87,14 @@
         app:layout_constraintTop_toBottomOf="@+id/labelnotel8" />
 
     <EditText
-        android:id="@+id/ttlpenerima2"
+        android:id="@+id/emailpenyediaprofil"
         android:layout_width="340dp"
         android:layout_height="46dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="11dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/form_daftar"
         android:ems="10"
         android:fontFamily="@font/poppins"
@@ -69,12 +106,12 @@
         android:textColorHint="#A3A3AE"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/labeljenkel2" />
 
     <EditText
-        android:id="@+id/jenkelinformasipribadi2"
+        android:id="@+id/usernamepenyediaprofil"
         android:layout_width="340dp"
         android:layout_height="46dp"
         android:layout_alignParentStart="true"
@@ -87,7 +124,7 @@
         android:ems="10"
         android:focusableInTouchMode="true"
         android:fontFamily="@font/poppins"
-        android:hint=" username"
+        android:hint="Username"
         android:padding="5dp"
         android:paddingStart="15dp"
         android:textColor="@color/black"
@@ -108,10 +145,10 @@
         android:textColor="#161C2B"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/namalengkap" />
+        app:layout_constraintTop_toBottomOf="@+id/namainstansi" />
 
     <EditText
-        android:id="@+id/namalengkap"
+        android:id="@+id/namainstansi"
         android:layout_width="340dp"
         android:layout_height="46dp"
         android:layout_alignParentStart="true"
@@ -142,7 +179,7 @@
         android:textColor="#161C2B"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/notelepon2" />
+        app:layout_constraintTop_toBottomOf="@+id/passpenyediaprofil" />
 
     <TextView
         android:id="@+id/statuspengguna"
@@ -153,12 +190,12 @@
         android:fontFamily="@font/poppins"
         android:paddingStart="1dp"
         android:paddingTop="1dp"
+        android:paddingBottom="1dp"
         android:text="Penyedia"
         android:textColor="#1E1EAE"
-        android:paddingBottom="1dp"
         android:textSize="14sp"
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/namapengguna" />
+        app:layout_constraintStart_toEndOf="@+id/ppPenyedia"
+        app:layout_constraintTop_toBottomOf="@+id/namapenyedia" />
 
     <ImageButton
         android:id="@+id/kembaliInformasi"
@@ -174,7 +211,7 @@
         app:srcCompat="@drawable/arrow_back" />
 
     <TextView
-        android:id="@+id/namapengguna"
+        android:id="@+id/namapenyedia"
         android:layout_width="209dp"
         android:layout_height="31dp"
         android:layout_marginStart="16dp"
@@ -182,17 +219,17 @@
         android:ems="10"
         android:fontFamily="@font/poppins"
         android:hint="nama pengguna"
-        android:textColor="@color/black"
         android:paddingStart="1dp"
         android:paddingTop="1dp"
         android:paddingBottom="1dp"
+        android:textColor="@color/black"
         android:textColorHint="#000000"
         android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintStart_toEndOf="@+id/ppPenyedia"
         app:layout_constraintTop_toBottomOf="@+id/labelnale19" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/ppPenyedia"
         android:layout_width="56dp"
         android:layout_height="56dp"
         android:layout_marginStart="44dp"
@@ -228,7 +265,7 @@
         android:textColor="#161C2B"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/jenkelinformasipribadi2" />
+        app:layout_constraintTop_toBottomOf="@+id/usernamepenyediaprofil" />
 
     <TextView
         android:id="@+id/labelnale19"
