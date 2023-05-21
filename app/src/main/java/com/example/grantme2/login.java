@@ -93,6 +93,25 @@ public class login extends AppCompatActivity {
 
                     if (decryptedUsername != null && decryptedPassword != null) {
                         if (username.equals(decryptedUsername) && password.equals(decryptedPassword)) {
+                            String namaLkpFb = snapshot.child("Penerima").child(userIdS).child("namaLengkap").getValue(String.class);
+                            String email = snapshot.child("Penerima").child(userIdS).child("email").getValue(String.class);
+                            String ttl = snapshot.child("Penerima").child(userIdS).child("ttl").getValue(String.class);
+                            String jenkel = snapshot.child("Penerima").child(userIdS).child("jenKel").getValue(String.class);
+                            String noTelp = snapshot.child("Penerima").child(userIdS).child("noTelepon").getValue(String.class);
+                            // mengirim data ke halaman informasi pribadi
+                            Intent i = new Intent(login.this, penerima_profil_informasi_pribadi.class);
+                            i.putExtra("namaLengkap", namaLkpFb);
+                            i.putExtra("email", email);
+                            i.putExtra("ttl", ttl);
+                            i.putExtra("jenKel", jenkel);
+                            i.putExtra("noTelp", noTelp);
+                            i.putExtra("username", decryptedUsername);
+                            startActivity(i);
+                            // mengirim username dan password ke halaman kata sandi
+                            Intent uP = new Intent(login.this, penerima_kata_sandi.class);
+                            uP.putExtra("username", decryptedUsername);
+                            uP.putExtra("password", decryptedPassword);
+                            startActivity(uP);
                             callback.onLoginSuccess();
                         } else {
                             callback.onLoginFailure();

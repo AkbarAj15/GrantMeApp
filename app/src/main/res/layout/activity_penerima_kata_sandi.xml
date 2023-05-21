@@ -18,7 +18,7 @@
         android:background="@drawable/button_daftar"
         android:fontFamily="@font/poppins_bold"
         android:gravity="center"
-        android:text="Simpan"
+        android:text="Ubah"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,7 +39,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/namaLkpPrfl"
+        android:id="@+id/usrPrfl"
         android:layout_width="340dp"
         android:layout_height="46dp"
         android:layout_alignParentStart="true"
@@ -50,7 +50,7 @@
         android:background="@drawable/form_daftar"
         android:ems="10"
         android:fontFamily="@font/poppins"
-        android:hint="Nama Lengkap"
+        android:hint="Username"
         android:paddingStart="15dp"
         android:textColor="@color/black"
         android:textColorHint="#A3A3AE"
@@ -58,19 +58,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/labelnale15" />
-
-    <TextView
-        android:id="@+id/labeljenkel3"
-        android:layout_width="225dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="11dp"
-        android:fontFamily="@font/poppins"
-        android:text="Jenis Kelamin"
-        android:textColor="#161C2B"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ttlPrfl" />
 
     <EditText
         android:id="@+id/ttlPrfl"
@@ -84,7 +71,7 @@
         android:background="@drawable/form_daftar"
         android:ems="10"
         android:fontFamily="@font/poppins"
-        android:hint="Tanggal Lahir"
+        android:hint="Password"
         android:inputType="date"
         android:padding="5dp"
         android:paddingStart="15dp"
@@ -94,19 +81,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/labelttl3" />
-
-    <TextView
-        android:id="@+id/labelemail3"
-        android:layout_width="225dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="11dp"
-        android:fontFamily="@font/poppins"
-        android:text="Email"
-        android:textColor="#161C2B"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/jenkelPrfl" />
 
     <ImageView
         android:id="@+id/fotoPnrma"
@@ -120,7 +94,7 @@
         tools:src="@drawable/default_profile" />
 
     <TextView
-        android:id="@+id/namaPnrama"
+        android:id="@+id/namaPnrama3"
         android:layout_width="209dp"
         android:layout_height="31dp"
         android:layout_marginStart="16dp"
@@ -138,56 +112,20 @@
         app:layout_constraintTop_toBottomOf="@+id/labelnale17" />
 
     <TextView
-        android:id="@+id/labelnotel3"
-        android:layout_width="225dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="11dp"
-        android:fontFamily="@font/poppins"
-        android:text="No. Telepon"
-        android:textColor="#161C2B"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailPrfl" />
-
-    <EditText
-        android:id="@+id/jenkelPrfl"
-        android:layout_width="340dp"
-        android:layout_height="46dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="11dp"
-        android:background="@drawable/form_daftar"
-        android:ems="10"
-        android:focusableInTouchMode="true"
-        android:fontFamily="@font/poppins"
-        android:hint=" jenis kelamin"
-        android:padding="5dp"
-        android:paddingStart="15dp"
-        android:textColor="@color/black"
-        android:textColorHint="#A3A3AE"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/labeljenkel3" />
-
-    <TextView
         android:id="@+id/labelttl3"
         android:layout_width="225dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="11dp"
         android:fontFamily="@font/poppins"
-        android:text="Tanggal Lahir"
+        android:text="Password"
         android:textColor="#161C2B"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/namaLkpPrfl" />
+        app:layout_constraintTop_toBottomOf="@+id/usrPrfl" />
 
     <TextView
-        android:id="@+id/statusPnrma"
+        android:id="@+id/statusPnrma3"
         android:layout_width="186dp"
         android:layout_height="28dp"
         android:layout_marginStart="16dp"
@@ -201,7 +139,7 @@
 
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/fotoPnrma"
-        app:layout_constraintTop_toBottomOf="@+id/namaPnrama" />
+        app:layout_constraintTop_toBottomOf="@+id/namaPnrama3" />
 
     <TextView
         android:id="@+id/textDaftar7"
@@ -209,60 +147,15 @@
         android:layout_height="33dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/poppins_bold"
-        android:text="Informasi Pribadi"
+        android:text="Kata Sandi"
         android:textColor="#161C2B"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.238"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/statusPnrma" />
+        app:layout_constraintTop_toBottomOf="@+id/statusPnrma3" />
 
-    <EditText
-        android:id="@+id/emailPrfl"
-        android:layout_width="340dp"
-        android:layout_height="46dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="11dp"
-        android:background="@drawable/form_daftar"
-        android:ems="10"
-        android:fontFamily="@font/poppins"
-        android:hint="Email"
-        android:inputType="text"
-        android:padding="5dp"
-        android:paddingStart="15dp"
-        android:textColor="@color/black"
-        android:textColorHint="#A3A3AE"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/labelemail3" />
-
-    <EditText
-        android:id="@+id/noTelpPrfl"
-        android:layout_width="340dp"
-        android:layout_height="46dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="11dp"
-        android:background="@drawable/form_daftar"
-        android:ems="10"
-        android:fontFamily="@font/poppins"
-        android:hint="No. Telepon"
-        android:inputType="number"
-        android:padding="5dp"
-        android:paddingStart="15dp"
-        android:textColor="@color/black"
-        android:textColorHint="#A3A3AE"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/labelnotel3" />
     <TextView
         android:id="@+id/labelnale15"
         android:layout_width="225dp"
@@ -270,7 +163,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins"
-        android:text="Nama Lengkap"
+        android:text="Username"
         android:textColor="#161C2B"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"

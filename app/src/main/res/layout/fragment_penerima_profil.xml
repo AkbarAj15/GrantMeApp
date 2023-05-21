@@ -180,7 +180,7 @@
         android:layout_marginStart="16dp"
         android:ems="10"
         android:fontFamily="@font/poppins"
-        android:hint="statuspengguna"
+        android:hint="Penerima"
         android:paddingStart="1dp"
         android:paddingTop="1dp"
         android:paddingBottom="1dp"
