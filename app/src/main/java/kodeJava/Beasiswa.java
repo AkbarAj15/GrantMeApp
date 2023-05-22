@@ -1,7 +1,18 @@
 package kodeJava;
+import java.io.Serializable;
 
-public class Beasiswa {
-        public String imageURL, namaBeasiswa, jenisBeasiswa, tanggalBuka, tanggalTutup, kuota, kriteria;
+public class Beasiswa implements Serializable {
+    private String key;
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
+    }
+
+    public String imageURL, namaBeasiswa, jenisBeasiswa, tanggalBuka, tanggalTutup, kuota, kriteria;
 
     public Beasiswa() {
     }

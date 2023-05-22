@@ -59,7 +59,7 @@ public class penyedia_TambahBeasiswa extends AppCompatActivity {
         etNamaBeasiswa = findViewById(R.id.inputnamabeasiswa);
         etJenisBeasiswa = findViewById(R.id.inputjenisbeasiswa);
         etKuota = findViewById(R.id.inputkuota);
-
+        etKriteria = findViewById(R.id.inputkriteria);
         etUnggahPoster = findViewById(R.id.unggahposter);
 
         uploadPoster = findViewById(R.id.btnunggahpost);
@@ -134,10 +134,9 @@ public class penyedia_TambahBeasiswa extends AppCompatActivity {
                         Beasiswa beasiswa = new Beasiswa(uri.toString(), namaBeasiswa, jenisBeasiswa,
                                 tanggalBuka, tanggalTutup, kuota, kriteria);
                         String key = mDatabase.push().getKey();
+                        beasiswa.setKey(key);
                         mDatabase.child(key).setValue(beasiswa);
                         Toast.makeText(penyedia_TambahBeasiswa.this, "Beasiswa Ditambahkan", Toast.LENGTH_SHORT).show();
-                        Intent i = new Intent(penyedia_TambahBeasiswa.this, penyedia_TambahBeasiswa.class);
-                        startActivity(i);
                     }
                 });
             }

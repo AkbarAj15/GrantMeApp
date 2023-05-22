@@ -19,12 +19,19 @@ import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
+
+import kodeJava.Beasiswa;
 
 public class penyedia_UbahBeasiswa extends AppCompatActivity {
     EditText etTanggalBuka, etTanggalTutup,etNamaBeasiswa, etJenisBeasiswa, etKuota, etKriteria, etUnggahPoster;
@@ -53,6 +60,9 @@ public class penyedia_UbahBeasiswa extends AppCompatActivity {
         etTanggalBuka = findViewById(R.id.ubahTanggalBuka);
         etTanggalTutup = findViewById(R.id.ubahTanggalTutup);
         etKuota = findViewById(R.id.ubahKuota);
+
+
+
         etKriteria = findViewById(R.id.ubahKriteria);
         ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
@@ -92,8 +102,71 @@ public class penyedia_UbahBeasiswa extends AppCompatActivity {
                 activityResultLauncher.launch(photoPicker);
             }
         });
+        btnUbahBeasiswa = findViewById(R.id.btnUbahBeasiswa);
+        btnUbahBeasiswa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (imageUri != null){
+                    uploadToFirebase(imageUri);
+                } else  {
+                    Toast.makeText(penyedia_UbahBeasiswa.this, "Poster belum ada!", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        Intent intent = getIntent();
+        if (intent.hasExtra("beasiswa")) {
+            Beasiswa beasiswa = (Beasiswa) intent.getSerializableExtra("beasiswa");
+            String beasiswaKey = beasiswa.getKey();
+
+            // Mengisi EditText dengan data beasiswa
+            etNamaBeasiswa.setText(beasiswa.getNamaBeasiswa());
+            etJenisBeasiswa.setText(beasiswa.getJenisBeasiswa());
+            etTanggalBuka.setText(beasiswa.getTanggalBuka());
+            etTanggalTutup.setText(beasiswa.getTanggalTutup());
+            etKuota.setText(beasiswa.getKuota());
+            etKriteria.setText(beasiswa.getKriteria());
+        }
 
 
+    }
+    private void uploadToFirebase(Uri uri){
+        String namaBeasiswa = etNamaBeasiswa.getText().toString();
+        String jenisBeasiswa = etJenisBeasiswa.getText().toString();
+        String tanggalBuka = etTanggalBuka.getText().toString();
+        String tanggalTutup = etTanggalTutup.getText().toString();
+        String kuota = etKuota.getText().toString();
+        String kriteria = etKriteria.getText().toString();
+
+        final StorageReference imageReference = storageReference.child(System.currentTimeMillis() + "." + getFileExtension(uri));
+        imageReference.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+            @Override
+            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                imageReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                    @Override
+                    public void onSuccess(Uri uri) {
+                        Intent intent = getIntent();
+                        if (intent.hasExtra("beasiswa")) {
+                            Beasiswa beasiswa = (Beasiswa) intent.getSerializableExtra("beasiswa");
+                            String beasiswaKey = beasiswa.getKey();
+                            Beasiswa beasiswa1 = new Beasiswa(uri.toString(), namaBeasiswa, jenisBeasiswa,
+                                    tanggalBuka, tanggalTutup, kuota, kriteria);
+                            mDatabase.child(beasiswaKey).setValue(beasiswa1);
+                            Toast.makeText(penyedia_UbahBeasiswa.this, "Beasiswa berhasil diubah", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+            }
+        }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
+            @Override
+            public void onProgress(@NonNull UploadTask.TaskSnapshot snapshot) {
+                Toast.makeText(penyedia_UbahBeasiswa.this, "Sedang Diproses...", Toast.LENGTH_SHORT).show();
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(penyedia_UbahBeasiswa.this, "Ubah Beasiswa Gagal!", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
     private String getFileExtension(Uri fileUri){
         ContentResolver contentResolver = getContentResolver();

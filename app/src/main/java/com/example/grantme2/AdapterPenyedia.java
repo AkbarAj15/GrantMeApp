@@ -1,10 +1,12 @@
 package com.example.grantme2;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -45,9 +47,17 @@ public class AdapterPenyedia extends BaseAdapter {
         }
         ImageView gridImage = view.findViewById(R.id.grid_image_penyedia);
         TextView gridCaption = view.findViewById(R.id.namaPenyedia_grid);
+        Button btnUbah = view.findViewById(R.id.btnUbahB);
         Glide.with(context).load(dataList.get(i).getImageURL()).into(gridImage);
         gridCaption.setText(dataList.get(i).getNamaBeasiswa());
-
+        btnUbah.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, penyedia_UbahBeasiswa.class);
+                intent.putExtra("beasiswa", dataList.get(i));
+                context.startActivity(intent);
+            }
+        });
         return view;
     }
 }

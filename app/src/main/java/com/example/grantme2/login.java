@@ -24,13 +24,14 @@ public class login extends AppCompatActivity {
     EditText edtUser, edtPass;
     ImageButton btnKembali;
     // deklarasi firebase
-    private DatabaseReference mDatabase;
+    private DatabaseReference mDatabase, beasiswa;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         // mengkoneksikan dengan firebase
         mDatabase = FirebaseDatabase.getInstance().getReference("Pengguna");
+        beasiswa = FirebaseDatabase.getInstance().getReference("Beasiswa");
         // membuat tombol kembali
         btnKembali = findViewById(R.id.backLogin);
         btnKembali.setOnClickListener(new View.OnClickListener() {

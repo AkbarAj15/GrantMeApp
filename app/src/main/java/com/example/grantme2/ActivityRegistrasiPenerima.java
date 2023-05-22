@@ -88,16 +88,29 @@ public class ActivityRegistrasiPenerima extends AppCompatActivity {
                 String noTelp = edtNoTelp.getText().toString();
                 String ttl = texttl.getText().toString();
                 String jenKel = textjenkel.getText().toString();
-                String id = mDatabase.push().getKey();
-                // membuat nilai nya ke halaman selanjutnya
-                Penerima penerima = new Penerima(namaLengkap, email, noTelp,
-                        ttl, jenKel);
-                mDatabase.child("Penerima").child(id).setValue(penerima);
-                // Save the Penerima object to the Firebase database
-                //membuat intent untuk mengirimkan nilai ke halaman buat username
-                Intent i = new Intent(ActivityRegistrasiPenerima.this, ActivityBuatUsername.class);
-                i.putExtra("userId", id);
-                startActivity(i);
+                if (namaLengkap.isEmpty()){
+                    edtNama.setError("Nama tidak boleh kosong");
+                } else if (email.isEmpty()) {
+                    edtEmail.setError("Email tidak boleh kosong");
+                } else if (noTelp.isEmpty()) {
+                    edtNoTelp.setError("Nomor telepon tidak boleh kosong");
+                } else if (ttl.isEmpty()) {
+                    texttl.setError("Tanggal lahir tidak boleh kosong");
+                } else if (jenKel.isEmpty()) {
+                    textjenkel.setError("Jenis kelamin tidak boleh kosong");
+                }else {
+                    String id = mDatabase.push().getKey();
+                    // membuat nilai nya ke halaman selanjutnya
+                    Penerima penerima = new Penerima(namaLengkap, email, noTelp,
+                            ttl, jenKel);
+                    mDatabase.child("Penerima").child(id).setValue(penerima);
+                    // Save the Penerima object to the Firebase database
+                    //membuat intent untuk mengirimkan nilai ke halaman buat username
+                    Intent i = new Intent(ActivityRegistrasiPenerima.this, ActivityBuatUsername.class);
+                    i.putExtra("userId", id);
+                    startActivity(i);
+                }
+
             }
         });
         // menuju ke halaman login jika sudah memiliki akun

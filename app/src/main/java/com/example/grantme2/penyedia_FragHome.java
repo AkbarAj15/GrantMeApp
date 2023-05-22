@@ -96,9 +96,30 @@ public class penyedia_FragHome extends Fragment {
             }
         });
         gridView_penyedia = view.findViewById(R.id.grid_home_penyedia);
+//        btnUbah.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent1 = getActivity().getIntent();
+//                String idBeasiswa = intent1.getStringExtra("idBeasiswa");
+//                String namaBeasiswa = intent1.getStringExtra("namaBeasiswa");
+//                String jenisBeasiswa = intent1.getStringExtra("jenisBeasiswa");
+//                String tanggalBuka = intent1.getStringExtra("tanggalBuka");
+//                String tanggalTutup = intent1.getStringExtra("tanggalTutup");
+//                String kuota = intent1.getStringExtra("kuota");
+//                String kriteria = intent1.getStringExtra("kriteria");
+//                Intent i = new Intent(requireContext(), penyedia_UbahBeasiswa.class);
+//                i.putExtra("idBeasiswa", idBeasiswa);
+//                i.putExtra("namaBeasiswa", namaBeasiswa);
+//                i.putExtra("jenisBeasiswa", jenisBeasiswa);
+//                i.putExtra("tanggalBuka", tanggalBuka);
+//                i.putExtra("tanggalTutup", tanggalTutup);
+//                i.putExtra("kuota", kuota);
+//                i.putExtra("kriteria", kriteria);
+//                startActivity(i);
+//            }
+//        });
         dataList = new ArrayList<>();
         adapter = new AdapterPenyedia(getActivity(), dataList);
-
         gridView_penyedia.setAdapter(adapter);
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override

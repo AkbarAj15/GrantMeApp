@@ -43,7 +43,7 @@
                 android:textSize="14sp" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/btnUbahB"
                 android:layout_width="54dp"
                 android:layout_height="22dp"
                 android:layout_alignParentTop="true"
@@ -59,13 +59,13 @@
                 android:textSize="10sp" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/btnHapusB"
                 android:layout_width="54dp"
                 android:layout_height="22dp"
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="6dp"
                 android:layout_marginTop="37dp"
-                android:layout_toEndOf="@+id/button"
+                android:layout_toEndOf="@+id/btnUbahB"
                 android:background="@drawable/radiusubahhapus"
                 android:fontFamily="@font/poppins_medium"
                 android:paddingTop="2dp"

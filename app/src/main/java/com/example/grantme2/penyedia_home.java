@@ -40,6 +40,13 @@ public class penyedia_home extends AppCompatActivity {
         String username = intent.getStringExtra("username");
         String password = intent.getStringExtra("password");
         String id = intent.getStringExtra("userId");
+        String idBeasiswa = intent.getStringExtra("idBeasiswa");
+        String namaBeasiswa = intent.getStringExtra("namaBeasiswa");
+        String jenisBeasiswa = intent.getStringExtra("jenisBeasiswa");
+        String tanggalBuka = intent.getStringExtra("tanggalBuka");
+        String tanggalTutup = intent.getStringExtra("tanggalTutup");
+        String kuota = intent.getStringExtra("kuota");
+        String kriteria = intent.getStringExtra("kriteria");
 
 
         getSupportFragmentManager()
