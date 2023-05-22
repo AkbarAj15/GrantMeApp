@@ -42,8 +42,10 @@ public class MyAdapter extends BaseAdapter {
         }
         ImageView gridImage = view.findViewById(R.id.grid_image);
         TextView gridCaption = view.findViewById(R.id.namabeagrid);
+        TextView sisaWaktu = view.findViewById(R.id.sisawaktugrid);
         Glide.with(context).load(dataList.get(i).getImageURL()).into(gridImage);
         gridCaption.setText(dataList.get(i).getNamaBeasiswa());
+        sisaWaktu.setText("Dibuka sampai : " + dataList.get(i).getTanggalTutup());
         return view;
     }
 }
