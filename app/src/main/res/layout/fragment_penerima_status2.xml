@@ -31,7 +31,6 @@
             android:textSize="14sp"
             tools:layout_editor_absoluteX="114dp"
             tools:layout_editor_absoluteY="46dp" />
-
         <Button
             android:id="@+id/buttonstatus"
             android:layout_width="100dp"

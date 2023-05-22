@@ -2,6 +2,6 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle" >
     <corners android:bottomRightRadius="16dp"
-        android:bottomLeftRadius="16dp">e</corners>
-    <stroke android:color="@color/black"/>
+        android:bottomLeftRadius="16dp"></corners>
+    <stroke android:color="@color/black"></stroke>
 </shape>
