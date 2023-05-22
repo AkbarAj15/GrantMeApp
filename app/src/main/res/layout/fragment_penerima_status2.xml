@@ -18,15 +18,16 @@
 
         <Button
             android:id="@+id/buttonterdaftar"
-            android:layout_width="100dp"
+            android:layout_width="101dp"
             android:layout_height="35dp"
-            android:textColor="#919191"
             android:background="@drawable/cornerbutton"
             android:fontFamily="@font/poppins_medium"
             android:forceHasOverlappingRendering="true"
             android:gravity="center"
+            android:paddingTop="3dp"
             android:text="Terdaftar"
             android:textAllCaps="false"
+            android:textColor="#919191"
             android:textSize="14sp"
             tools:layout_editor_absoluteX="114dp"
             tools:layout_editor_absoluteY="46dp" />
@@ -39,6 +40,7 @@
             android:fontFamily="@font/poppins_medium"
             android:forceHasOverlappingRendering="true"
             android:gravity="center"
+            android:paddingTop="3dp"
             android:text="Status"
             android:textAllCaps="false"
             android:textSize="14sp"

@@ -24,6 +24,7 @@
             android:forceHasOverlappingRendering="true"
             android:gravity="center"
             android:text="Terdaftar"
+            android:paddingTop="3dp"
             android:textAllCaps="false"
             android:textSize="14sp"
             tools:layout_editor_absoluteX="114dp"
@@ -37,6 +38,7 @@
             android:fontFamily="@font/poppins_medium"
             android:forceHasOverlappingRendering="true"
             android:gravity="center"
+            android:paddingTop="3dp"
             android:text="Status"
             android:textColor="#919191"
             android:textAllCaps="false"
@@ -44,7 +46,4 @@
             tools:layout_editor_absoluteX="205dp"
             tools:layout_editor_absoluteY="46dp" />
     </LinearLayout>
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
