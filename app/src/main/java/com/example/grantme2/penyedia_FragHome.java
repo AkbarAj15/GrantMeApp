@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -70,5 +71,13 @@ public class penyedia_FragHome extends Fragment {
         Intent intent = getActivity().getIntent();
         String username = intent.getStringExtra("username");
         txtUsername.setText(username);
+        ImageView btnTambah = (ImageView) getView().findViewById(R.id.btnTambah);
+        btnTambah.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getContext(), penyedia_TambahBeasiswa.class);
+                startActivity(i);
+            }
+        });
     }
 }

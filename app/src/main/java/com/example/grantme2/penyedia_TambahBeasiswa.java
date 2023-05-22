@@ -35,7 +35,7 @@ import kodeJava.Beasiswa;
 
 public class penyedia_TambahBeasiswa extends AppCompatActivity {
     EditText etTanggalBuka, etTanggalTutup,etNamaBeasiswa, etJenisBeasiswa, etKuota, etKriteria, etUnggahPoster;
-    ImageButton uploadPoster;
+    ImageButton uploadPoster,btnKembali;
     private Uri imageUri;
     Button btntambahbea;
     final private DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("Beasiswa");
@@ -45,6 +45,14 @@ public class penyedia_TambahBeasiswa extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_penyedia_tambah_beasiswa);
+        btnKembali = findViewById(R.id.backtambahbeasiswa);
+        btnKembali.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
         // menghubungkan objek xml
         btntambahbea = findViewById(R.id.btntambahbeasiswa);
         // editext input
