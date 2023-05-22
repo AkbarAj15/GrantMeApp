@@ -8,7 +8,30 @@
     android:background="@color/white"
     android:backgroundTint="@color/white">
 
+    <EditText
+        android:id="@+id/notelepon"
+        android:layout_width="350dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/form_daftar"
+        android:drawableLeft="@drawable/search"
+        android:drawablePadding="15dp"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:hint="Pencarian"
+        android:inputType="text"
+        android:padding="5dp"
+        android:paddingStart="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="#A3A3AE"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="207dp"
         android:layout_height="40dp"
         android:layout_marginTop="50dp"
@@ -31,6 +54,7 @@
             android:textSize="14sp"
             tools:layout_editor_absoluteX="114dp"
             tools:layout_editor_absoluteY="46dp" />
+
         <Button
             android:id="@+id/buttonstatus"
             android:layout_width="100dp"

@@ -35,7 +35,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_marginStart="11dp"
                 android:layout_marginTop="10dp"
-                android:fontFamily="@font/poppins"
+                android:fontFamily="@font/poppins_medium"
                 android:gravity="left"
                 android:hint="nama beasiswa"
                 android:textColor="#000000"
