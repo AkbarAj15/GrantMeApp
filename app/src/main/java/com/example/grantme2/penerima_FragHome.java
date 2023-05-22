@@ -21,6 +21,8 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
+import kodeJava.Beasiswa;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link penerima_FragHome#newInstance} factory method to
@@ -74,10 +76,10 @@ public class penerima_FragHome extends Fragment {
     }
     FloatingActionButton fab;
     private GridView gridView, gridView_atas;
-    private ArrayList<DataClass> dataList;
+    private ArrayList<Beasiswa> dataList;
     private MyAdapter adapter;
     private  AdapterGrid adapter2;
-    final private DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Images");
+    final private DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Beasiswa");
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -98,8 +100,8 @@ public class penerima_FragHome extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-                    DataClass dataClass = dataSnapshot.getValue(DataClass.class);
-                    dataList.add(dataClass);
+                    Beasiswa beasiswa = dataSnapshot.getValue(Beasiswa.class);
+                    dataList.add(beasiswa);
                 }
                 adapter2.notifyDataSetChanged();
                 adapter.notifyDataSetChanged();

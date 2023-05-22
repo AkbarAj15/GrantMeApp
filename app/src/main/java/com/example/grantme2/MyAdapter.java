@@ -8,11 +8,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import java.util.ArrayList;
+
+import kodeJava.Beasiswa;
+
 public class MyAdapter extends BaseAdapter {
-    private ArrayList<DataClass> dataList;
+    private ArrayList<Beasiswa> dataList;
     private Context context;
     LayoutInflater layoutInflater;
-    public MyAdapter(Context context, ArrayList<DataClass> dataList) {
+    public MyAdapter(Context context, ArrayList<Beasiswa> dataList) {
         this.context = context;
         this.dataList = dataList;
     }
@@ -40,7 +43,7 @@ public class MyAdapter extends BaseAdapter {
         ImageView gridImage = view.findViewById(R.id.grid_image);
         TextView gridCaption = view.findViewById(R.id.namabeagrid);
         Glide.with(context).load(dataList.get(i).getImageURL()).into(gridImage);
-        gridCaption.setText(dataList.get(i).getCaption());
+        gridCaption.setText(dataList.get(i).getNamaBeasiswa());
         return view;
     }
 }

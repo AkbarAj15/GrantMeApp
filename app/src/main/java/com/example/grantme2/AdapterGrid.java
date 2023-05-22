@@ -6,18 +6,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
+import kodeJava.Beasiswa;
+
 public class AdapterGrid extends BaseAdapter {
 
-    private ArrayList<DataClass> dataList;
+    private ArrayList<Beasiswa> dataList;
     private Context context;
     LayoutInflater layoutInflater;
-    public AdapterGrid(Context context, ArrayList<DataClass> dataList) {
+    public AdapterGrid(Context context, ArrayList<Beasiswa> dataList) {
         this.context = context;
         this.dataList = dataList;
     }
