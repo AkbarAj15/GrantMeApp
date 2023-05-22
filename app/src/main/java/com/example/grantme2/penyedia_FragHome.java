@@ -96,7 +96,9 @@ public class penyedia_FragHome extends Fragment {
             }
         });
         gridView_penyedia = view.findViewById(R.id.grid_home_penyedia);
+        dataList = new ArrayList<>();
         adapter = new AdapterPenyedia(getActivity(), dataList);
+
         gridView_penyedia.setAdapter(adapter);
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override

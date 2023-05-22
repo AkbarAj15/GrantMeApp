@@ -70,6 +70,11 @@ public class ActivityBuatUsername extends AppCompatActivity {
                         String ttl = snapshot.child("Penerima").child(id).child("ttl").getValue(String.class);
                         String jenkel = snapshot.child("Penerima").child(id).child("jenKel").getValue(String.class);
                         String noTelp = snapshot.child("Penerima").child(id).child("noTelepon").getValue(String.class);
+                        String ktp = snapshot.child("Penerima").child(id).child("Dokumen Saya").child("KTP").getValue(String.class);
+                        String kk = snapshot.child("Penerima").child(id).child("Dokumen Saya").child("Kartu Keluarga").getValue(String.class);
+                        String fotoProfil = snapshot.child("Penerima").child("Penerima").child(id).child("Dokumen Saya").child("Foto Profil").getValue(String.class);
+                        String ijazah = snapshot.child("Penerima").child(id).child("Dokumen Saya").child("Ijazah Terakhir").getValue(String.class);
+                        String transkrip = snapshot.child("Penerima").child(id).child("Dokumen Saya").child("Transkrip Nilai").getValue(String.class);
                         Intent i = new Intent(getApplicationContext(), penerima_home.class);
                         String decryptedUsername = AES.decrypt(encryptedUsername);
                         String decryptedPassword = AES.decrypt(encryptedPassword);
@@ -81,6 +86,11 @@ public class ActivityBuatUsername extends AppCompatActivity {
                         i.putExtra("username", decryptedUsername);
                         i.putExtra("password", decryptedPassword);
                         i.putExtra("userId", id);
+                        i.putExtra("ktp", ktp);
+                        i.putExtra("kk", kk);
+                        i.putExtra("fotoProfil", fotoProfil);
+                        i.putExtra("ijazah", ijazah);
+                        i.putExtra("transkrip", transkrip);
                         startActivity(i);
                     }
 

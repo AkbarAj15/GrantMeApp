@@ -94,6 +94,11 @@ public class login extends AppCompatActivity {
                                 String ttl = snapshot.child(id).child("ttl").getValue(String.class);
                                 String jenkel = snapshot.child(id).child("jenKel").getValue(String.class);
                                 String noTelp = snapshot.child(id).child("noTelepon").getValue(String.class);
+                                String ktp = snapshot.child(id).child("dokumenSaya").child("KTP").getValue(String.class);
+                                String kk = snapshot.child(id).child("dokumenSaya").child("kartuKeluarga").getValue(String.class);
+                                String fotoProfil = snapshot.child(id).child("dokumenSaya").child("fotoProfil").getValue(String.class);
+                                String ijazah = snapshot.child(id).child("dokumenSaya").child("ijazahTerakhir").getValue(String.class);
+                                String transkrip = snapshot.child(id).child("dokumenSaya").child("transkripNilai").getValue(String.class);
                                 // mengirim data ke halaman informasi pribadi
                                 Intent i = new Intent(login.this, penerima_home.class);
                                 i.putExtra("namaLengkap", namaLkpFb);
@@ -104,6 +109,11 @@ public class login extends AppCompatActivity {
                                 i.putExtra("username", decryptedUsername);
                                 i.putExtra("password", decryptedPassword);
                                 i.putExtra("userId", id);
+                                i.putExtra("ktp", ktp);
+                                i.putExtra("kk", kk);
+                                i.putExtra("fotoProfil", fotoProfil);
+                                i.putExtra("ijazah", ijazah);
+                                i.putExtra("transkrip", transkrip);
                                 startActivity(i);
                                 callback.onLoginSuccess();
                             } else {

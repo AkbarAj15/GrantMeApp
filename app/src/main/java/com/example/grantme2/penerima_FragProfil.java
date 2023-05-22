@@ -1,15 +1,24 @@
 package com.example.grantme2;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import com.bumptech.glide.Glide;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -48,6 +57,7 @@ public class penerima_FragProfil extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
+    final private StorageReference storageReference = FirebaseStorage.getInstance().getReference();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -70,6 +80,26 @@ public class penerima_FragProfil extends Fragment {
         TextView txtNama = (TextView) getView().findViewById(R.id.namapenerima);
         Intent intent =getActivity().getIntent();
         String username = intent.getStringExtra("username");
+      String fotoProfil = intent.getStringExtra("fotoProfil");
+      ImageView foto = (ImageView) getView().findViewById(R.id.fotoProfilPnrma);
+
+        StorageReference imageRef = storageReference.child(fotoProfil);
+        imageRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+            @Override
+            public void onSuccess(Uri uri) {
+                // Uri gambar berhasil didapatkan
+                String imageURL = uri.toString();
+
+                // Gunakan imageURL untuk menampilkan gambar ke ImageView atau komponen lainnya
+                // Misalnya:
+                Glide.with(requireContext()).load(imageURL).into(foto);
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                // Penanganan kesalahan jika gambar gagal didownload
+            }
+        });
         txtNama.setText(username);
         Button btn = (Button) getView().findViewById(R.id.keluarprofil);
         btn.setOnClickListener(new View.OnClickListener() {
@@ -111,8 +141,19 @@ public class penerima_FragProfil extends Fragment {
                 Intent intent = getActivity().getIntent();
                 String username1 = intent.getStringExtra("username");
                 String id = intent.getStringExtra("userId");
+                String ktp = intent.getStringExtra("ktp");
+                String kk = intent.getStringExtra("kk");
+                String fotoProfil = intent.getStringExtra("fotoProfil");
+                String transkrip = intent.getStringExtra("transkrip");
+                String ijazah = intent.getStringExtra("ijazah");
                 Intent i = new Intent(getContext(), penerima_profil_dokumenSaya.class);
+                i.putExtra("ktp", ktp);
+                i.putExtra("kk", kk);
+                i.putExtra("fotoProfil", fotoProfil);
+                i.putExtra("ijazah", ijazah);
+                i.putExtra("transkrip", transkrip);
                 i.putExtra("username", username1);
+                i.putExtra("userId", id);
                 startActivity(i);
             }
         });

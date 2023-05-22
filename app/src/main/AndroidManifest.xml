@@ -30,9 +30,6 @@
             android:name=".penyedia_profil_informasiPribadi"
             android:exported="true" />
         <activity
-            android:name=".UploadActivity"
-            android:exported="true" />
-        <activity
             android:name=".penyedia_TambahBeasiswa"
             android:exported="true"
             android:windowSoftInputMode="adjustPan" >
@@ -80,7 +77,6 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
