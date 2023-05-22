@@ -76,7 +76,7 @@
         android:fontFamily="@font/poppins_bold"
         android:text="Daftar Beasiswa Anda"
         android:textColor="@color/black"
-        android:textSize="20sp" />
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/textView9"
@@ -148,12 +148,12 @@
 
     <ImageButton
         android:id="@+id/btnTambah"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="59dp"
+        android:layout_height="64dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="33dp"
-        android:layout_marginBottom="120dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginBottom="139dp"
         android:background="@color/white"
         android:src="@drawable/tambah_1" />
 
