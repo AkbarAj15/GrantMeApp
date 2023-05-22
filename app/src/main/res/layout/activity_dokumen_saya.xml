@@ -130,7 +130,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/simpandokumen"
+                app:layout_constraintTop_toBottomOf="@+id/uptranskrip"
                 app:layout_constraintVertical_bias="1.0" />
 
             <TextView
@@ -142,7 +142,7 @@
                 android:ems="10"
                 android:fontFamily="@font/poppins"
                 android:gravity="right"
-                android:hint="statusijazah"
+                android:hint="statustranskrip"
                 android:paddingStart="1dp"
                 android:paddingTop="1dp"
                 android:paddingBottom="1dp"
@@ -404,8 +404,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="22dp"
-        android:layout_marginBottom="33dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/button_daftar"
         android:fontFamily="@font/poppins_bold"
         android:gravity="center"
@@ -413,8 +412,6 @@
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.307"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
