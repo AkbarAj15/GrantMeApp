@@ -5,12 +5,23 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+
+import kodeJava.Beasiswa;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -65,6 +76,11 @@ public class penyedia_FragHome extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_penyedia__home, container, false);
     }
+
+    private GridView gridView_penyedia;
+    private ArrayList<Beasiswa> dataList;
+    private AdapterPenyedia adapter;
+    final private DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Beasiswa");
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         TextView txtUsername = (TextView) getView().findViewById(R.id.userPenyedia);
@@ -79,5 +95,23 @@ public class penyedia_FragHome extends Fragment {
                 startActivity(i);
             }
         });
+        gridView_penyedia = view.findViewById(R.id.grid_home_penyedia);
+        adapter = new AdapterPenyedia(getActivity(), dataList);
+        gridView_penyedia.setAdapter(adapter);
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                    Beasiswa beasiswa = dataSnapshot.getValue(Beasiswa.class);
+                    dataList.add(beasiswa);
+                }
+                adapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+            }
+        });
+
     }
 }

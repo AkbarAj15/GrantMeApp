@@ -13,7 +13,6 @@
         android:layout_height="522dp"
         android:layout_below="@+id/textView10"
         android:layout_marginTop="20dp">
-
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="627dp"
