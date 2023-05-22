@@ -8,6 +8,38 @@
     tools:context=".penyedia_FragHome"
     android:background="@color/white">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="522dp"
+        android:layout_below="@+id/textView10"
+        android:layout_marginTop="20dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="627dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <GridView
+                    android:id="@+id/grid_home_penyedia"
+                    android:layout_width="match_parent"
+                    android:layout_height="637dp"
+                    android:numColumns="1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.421"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </LinearLayout>
     <View
         android:id="@+id/rectangle_1"
         android:layout_width="335dp"
@@ -66,10 +98,10 @@
         android:id="@+id/textView11"
         android:layout_width="97dp"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/rectangle_1"
         android:layout_alignEnd="@+id/rectangle_1"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="514dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="-1dp"
         android:fontFamily="@font/poppins_semibold"
         android:text="Lihat semua"
         android:textColor="#6E85B7"
@@ -115,14 +147,15 @@
         android:textColorHint="#A3A3AE"
         android:textSize="14sp" />
 
-    <ImageView
+    <ImageButton
         android:id="@+id/btnTambah"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="33dp"
-        android:layout_marginBottom="72dp"
+        android:layout_marginBottom="120dp"
+        android:background="@color/white"
         android:src="@drawable/tambah_1" />
 
 </RelativeLayout>
