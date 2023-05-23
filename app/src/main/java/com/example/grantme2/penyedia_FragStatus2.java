@@ -5,16 +5,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link penerima_FragStatus#newInstance} factory method to
+ * Use the {@link penyedia_FragStatus2#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class penerima_FragStatus extends Fragment {
+public class penyedia_FragStatus2 extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -25,7 +23,7 @@ public class penerima_FragStatus extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public penerima_FragStatus() {
+    public penyedia_FragStatus2() {
         // Required empty public constructor
     }
 
@@ -35,11 +33,11 @@ public class penerima_FragStatus extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment FragStatus.
+     * @return A new instance of fragment penyedia_FragStatus.
      */
     // TODO: Rename and change types and number of parameters
-    public static penerima_FragStatus newInstance(String param1, String param2) {
-        penerima_FragStatus fragment = new penerima_FragStatus();
+    public static penyedia_FragStatus2 newInstance(String param1, String param2) {
+        penyedia_FragStatus2 fragment = new penyedia_FragStatus2();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -60,11 +58,6 @@ public class penerima_FragStatus extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_penerima_status, container, false);
-    }
-
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
+        return inflater.inflate(R.layout.fragment_penyedia__status2, container, false);
     }
 }

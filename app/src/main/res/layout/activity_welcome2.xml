@@ -11,7 +11,7 @@
     <ImageView
         android:id="@+id/view"
         android:layout_width="413dp"
-        android:layout_height="405dp"
+        android:layout_height="465dp"
         android:background="@drawable/bulat"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -34,29 +34,31 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="44dp"
-        android:layout_marginTop="32dp"
         android:fontFamily="@font/poppins_bold"
         android:gravity="center"
         android:text="Daftar Akun"
         android:textColor="#000000"
         android:textSize="34sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/woman" />
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="179dp"
         android:layout_height="53dp"
+        android:layout_marginBottom="32dp"
         android:fontFamily="@font/poppins_bold"
         android:gravity="center"
         android:text="Grant Me"
         android:textColor="#6E85B7"
         android:textSize="34sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnPenyedia"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnPenerima"
