@@ -116,7 +116,6 @@ public class penyedia_UbahBeasiswa extends AppCompatActivity {
         Intent intent = getIntent();
         if (intent.hasExtra("beasiswa")) {
             Beasiswa beasiswa = (Beasiswa) intent.getSerializableExtra("beasiswa");
-            String beasiswaKey = beasiswa.getKey();
 
             // Mengisi EditText dengan data beasiswa
             etNamaBeasiswa.setText(beasiswa.getNamaBeasiswa());

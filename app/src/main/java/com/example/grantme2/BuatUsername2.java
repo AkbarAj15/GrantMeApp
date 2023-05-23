@@ -53,41 +53,45 @@ public class BuatUsername2 extends AppCompatActivity {
                 // memberikan objek untuk edittext
                 String username = edtUsername.getText().toString();
                 String password = edtPassword.getText().toString();
-                Intent intent = getIntent();
-                String id = intent.getStringExtra("userId");
-                // mengenkripsi username dan password menggunakan AES algoritma
-                String encryptedUsername = AES.encrypt(username);
-                String encryptedPassword = AES.encrypt(password);
-                mDatabase.child("Penyedia").child(id).child("username").setValue(encryptedUsername);
-                mDatabase.child("Penyedia").child(id).child("password").setValue(encryptedPassword);
-                // memberikan objek untuk class AES sehingga data diambil di AES
-                Toast.makeText(BuatUsername2.this, "Registrasi Anda Berhasil!", Toast.LENGTH_LONG).show();
-                // mengirimkan nilai ke semua halaman
-                mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        String namaInstansi = snapshot.child("Penyedia").child(id).child("namaInstansi").getValue(String.class);
-                        String emailIns = snapshot.child("Penyedia").child(id).child("emailInstansi").getValue(String.class);
-                        String noTelpIns = snapshot.child("Penyedia").child(id).child("noTelpInstansi").getValue(String.class);
-                        String decryptedUsername = AES.decrypt(encryptedUsername);
-                        String decryptedPassword = AES.decrypt(encryptedPassword);
-                        Intent i = new Intent(getApplicationContext(), penyedia_home.class);
-                        i.putExtra("namaIns", namaInstansi);
-                        i.putExtra("emailIns", emailIns);
-                        i.putExtra("noTelpIns", noTelpIns);
-                        i.putExtra("username", decryptedUsername);
-                        i.putExtra("password", decryptedPassword);
-                        i.putExtra("userId", id);
-                        startActivity(i);
-                    }
+                if(username.isEmpty()){
+                    edtPassword.setError("username tidak boleh kosong");
+                } else if (password.isEmpty()) {
+                    edtPassword.setError("password tidak boleh kosong");
+                }else {
+                    Intent intent = getIntent();
+                    String id = intent.getStringExtra("userId");
+                    // mengenkripsi username dan password menggunakan AES algoritma
+                    String encryptedUsername = AES.encrypt(username);
+                    String encryptedPassword = AES.encrypt(password);
+                    mDatabase.child("Penyedia").child(id).child("username").setValue(encryptedUsername);
+                    mDatabase.child("Penyedia").child(id).child("password").setValue(encryptedPassword);
+                    // memberikan objek untuk class AES sehingga data diambil di AES
+                    Toast.makeText(BuatUsername2.this, "Registrasi Anda Berhasil!", Toast.LENGTH_LONG).show();
+                    // mengirimkan nilai ke semua halaman
+                    mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            String namaInstansi = snapshot.child("Penyedia").child(id).child("namaInstansi").getValue(String.class);
+                            String emailIns = snapshot.child("Penyedia").child(id).child("emailInstansi").getValue(String.class);
+                            String noTelpIns = snapshot.child("Penyedia").child(id).child("noTelpInstansi").getValue(String.class);
+                            String decryptedUsername = AES.decrypt(encryptedUsername);
+                            String decryptedPassword = AES.decrypt(encryptedPassword);
+                            Intent i = new Intent(getApplicationContext(), penyedia_home.class);
+                            i.putExtra("namaIns", namaInstansi);
+                            i.putExtra("emailIns", emailIns);
+                            i.putExtra("noTelpIns", noTelpIns);
+                            i.putExtra("username", decryptedUsername);
+                            i.putExtra("password", decryptedPassword);
+                            i.putExtra("userId", id);
+                            startActivity(i);
+                        }
 
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
 
-                    }
-                });
-                // membuat intent untuk ke halaman home
-
+                        }
+                    });
+                }
             }
         });
     }

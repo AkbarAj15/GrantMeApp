@@ -51,14 +51,22 @@ public class ActivityRegistrasiPenyedia extends AppCompatActivity {
                 String namaIns = edtNamaInstansi.getText().toString();
                 String emailIns = edtEmail.getText().toString();
                 String noTelpIns = edtNotelp.getText().toString();
-                String id = mDatabase.push().getKey();
-                // memberikan nilai melalui class penyedia
-                Penyedia penyedia = new Penyedia(namaIns, emailIns, noTelpIns);
-                mDatabase.child("Penyedia").child(id).setValue(penyedia);
-                //membuat intent untuk mengirimkan nilai ke halaman buat username
-                Intent i = new Intent(ActivityRegistrasiPenyedia.this, BuatUsername2.class);
-                i.putExtra("userId", id);
-                startActivity(i);
+                if (namaIns.isEmpty()){
+                    edtNamaInstansi.setError("Nama Instansi tidak boleh kosong");
+                } else if (emailIns.isEmpty()) {
+                    edtEmail.setError("Email Tidak boleh kosong");
+                } else if (noTelpIns.isEmpty()) {
+                    edtNotelp.setError("Nomor telepon tidak boleh kosong");
+                }else{
+                    String id = mDatabase.push().getKey();
+                    // memberikan nilai melalui class penyedia
+                    Penyedia penyedia = new Penyedia(namaIns, emailIns, noTelpIns);
+                    mDatabase.child("Penyedia").child(id).setValue(penyedia);
+                    //membuat intent untuk mengirimkan nilai ke halaman buat username
+                    Intent i = new Intent(ActivityRegistrasiPenyedia.this, BuatUsername2.class);
+                    i.putExtra("userId", id);
+                    startActivity(i);
+                }
             }
         });
         login = findViewById(R.id.masukPenyedia);
