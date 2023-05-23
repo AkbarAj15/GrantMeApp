@@ -77,7 +77,6 @@ public class penerima_profil_informasi_pribadi extends AppCompatActivity {
                 mDatabase.child("Penerima").child(id).child("noTelepon").setValue(noTelp1);
                 mDatabase.child("Penerima").child(id).child("ttl").setValue(ttl1);
                 Toast.makeText(penerima_profil_informasi_pribadi.this, "Perubahan Anda Berhasil!", Toast.LENGTH_LONG).show();
-                finish();
             }
         });
     }
