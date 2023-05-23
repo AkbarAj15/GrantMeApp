@@ -32,7 +32,6 @@ public class ActivityBuatUsername extends AppCompatActivity {
         setContentView(R.layout.activity_buat_username);
         // menghubungkan firebase
         mDatabase = FirebaseDatabase.getInstance().getReference("Pengguna");
-        int userId = getIntent().getIntExtra("userId", 1);
         // tombol kembali ke halaman *RegistrasiPenerima
         btnKembali = findViewById(R.id.backUserPnrma);
         btnKembali.setOnClickListener(new View.OnClickListener() {

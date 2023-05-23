@@ -75,6 +75,11 @@ public class login extends AppCompatActivity {
     public void cekPenerima(LoginCallback callback){
         String username = edtUser.getText().toString().trim();
         String password = edtPass.getText().toString().trim();
+        if(username.isEmpty()){
+            edtUser.setError("username kosong");
+        }else if (password.isEmpty()) {
+            edtPass.setError("Password kosong");
+        }else{
         mDatabase.child("Penerima").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -136,9 +141,15 @@ public class login extends AppCompatActivity {
             }
         });
     }
+    }
     public void cekPenyedia(LoginCallback callback){
         String username = edtUser.getText().toString().trim();
         String password = edtPass.getText().toString().trim();
+        if (username.isEmpty()){
+            edtUser.setError("Username kosong");
+        } else if (password.isEmpty()) {
+            edtPass.setError("Password kosong");
+        }else{
         mDatabase.child("Penyedia").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -182,6 +193,7 @@ public class login extends AppCompatActivity {
 
             }
         });
+    }
     }
     public interface LoginCallback {
         void onLoginSuccess();
