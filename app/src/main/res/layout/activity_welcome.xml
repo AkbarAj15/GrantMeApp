@@ -92,7 +92,6 @@
         android:id="@+id/textTemukan"
         android:layout_width="288dp"
         android:layout_height="wrap_content"
-
         android:layout_marginBottom="21dp"
         android:fontFamily="@font/poppins_medium"
         android:text="Temukan Beasiswamu dan Raih Impianmu"
