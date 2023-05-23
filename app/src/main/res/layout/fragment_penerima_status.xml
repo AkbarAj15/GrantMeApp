@@ -7,6 +7,16 @@
     tools:context=".penerima_FragStatus"
     android:background="@color/white">
 
+    <View
+        android:id="@+id/view10"
+        android:layout_width="400dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="16dp"
+        android:background="#DFDFDF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notelepon" />
+
     <EditText
         android:id="@+id/notelepon"
         android:layout_width="350dp"
