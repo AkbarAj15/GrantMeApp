@@ -408,6 +408,8 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/button_daftar"
         android:fontFamily="@font/poppins_bold"
